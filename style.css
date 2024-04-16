@@ -8,10 +8,17 @@
     /* color: #E1324B; */
 }
 
+body {
+	a, p, h2, button {
+		font-family: 'Nunito';
+	}
+}
+
 .container{
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
 	background-color: #565c56;
+	overflow-x: hidden;
 	/* background-image: linear-gradient(0deg, #565c56 0%, #ebebeb 100%); */
 }
 
@@ -19,17 +26,18 @@
 
 nav{
 	position: fixed;
-	width: 98.5%;
+	width: 100%;
 	height: 80px;
 	background-color: #FFFAFF;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 12px 20px;
-	margin: 12px;
+	padding: 12px 50px;
+	
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(6.6px);
 	-webkit-backdrop-filter: blur(6.6px);
+	z-index: 9;
 }
 
 nav .home{
@@ -50,6 +58,7 @@ nav .home{
 }
 
 .home a{
+	font-family: 'Montserrat';
 	font-size: 28px;
 	font-weight: 600;
 	text-decoration: none;
@@ -65,21 +74,22 @@ nav .home{
 	font-size: 16px;
 }
 
-.links-list a{
+.links-list .link{
 	text-decoration: none;
 	color: #151414;
+	padding:16px;
+	text-align: center;
 }
 
-.links-list a:hover{
-	text-decoration: underline;
-	color: #D01117;
+.links-list .link:hover{
+	background-color: #D01117; 
+	color: #FFFAFF;
 }
 
 .apply{
 	background: #D01117;
-	padding: 0px 18px;
-	height: 45px;
-	border-radius: 4px;
+	padding: 16px;
+	height: 50px;
 	border: 2px solid #D01117;
 	display: flex;
 	align-items: center;
@@ -96,12 +106,103 @@ nav .home{
 	color: #D01117;
 }
 
+.link{
+	display: flex;
+}
+
+/*------------------------ DropDown ------------------------*/
+.dropbtn {
+  background-color: transparent;
+  color: #151414;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FFFAFF;
+  min-width: 205px;
+  
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #D01117; color: #FFFAFF;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #D01117; color: #FFFAFF;}
+
+/*------------------------ Download Box ------------------------*/
+
+.application{
+	max-width: 500px;
+	height: 100px;
+	padding: 26px 16px;
+	border-radius: 4px;
+	background: #FFFAFF;
+	color: #151414;
+	position: fixed;
+	right: 3%;
+	top: -3%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	flex-direction: column;
+	z-index: 1;
+	font-size: 20px;
+	color: #bbb;
+	visibility: hidden;
+	transition: .6s;
+}
+
+.application:hover{
+	background: #FFFAFF;
+}
+.downloading{
+	/* max-width: 500px; */
+	/* padding: 16px; */
+	top: 11%;
+	visibility: visible;
+}
+
+.application h3{
+	font-size: 14px;
+	color: #151414;	
+}
+
+/* .application button{
+	background: #D01117;
+	color: #FFFAFF;
+	border-radius: 4px;
+	font-size: 12px;
+	padding: 12px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+} */
+
 
 /*------------------------ LANDING PAGE ------------------------*/
 
 .landing-page{
-	width: 100%;
-	height: 100%;
+	min-width: 100%;
+	height: 100vh;
 	background: #FFFAFF;
 	display: flex;
 	align-items: center;
@@ -117,16 +218,30 @@ nav .home{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 20px;
 	overflow: hidden;
+	background-image: url(images/background.jpg);
+	position: relative;
 }
 
-.study-area{
-	background-image: url(images/desks.jpg);
+.section .area {
+	position: absolute;
+	width: 1600px;
+	background: red;
+	/* background-image: url(images/desks.jpg); */
 }
 
-.gallery-area{
+#gallery{
 	background-image: url(images/books.jpg);
+	object-fit: cover;
+	background-size: cover;
+	background-position: center;
+	left: -100%;
+}
+
+.slide {
+	position: absolute;
+	left: 40%;
+	z-index: 9999;
 }
 
 /*------------------------ Study Area ------------------------*/
@@ -184,20 +299,24 @@ nav .home{
 /*------------------------ NEWS AREA ------------------------*/
 
 .news-area {
-	height: 500px;
+	height: 100vh;
 	width: 100%;
-	padding: 30px 50px;
+	padding: 30px 30px;
 	display: flex;
 	flex-direction: column;
 	align-items: start;
 	justify-content: start;
+	background: #FFFAFF;
 }
 
 .content{
 	width: 100%;
 	display: flex;
-	align-items: center;
+	align-items: start;
 	justify-content: space-between;
+	height: 100%;
+	/* background: red; */
+	gap: 20px;
 }
 
 .news-area h1{
@@ -221,32 +340,93 @@ nav .home{
 	background: #D01117;
 }
 
-.articles{
+.content-area{
 	padding: 20px;
 	/* background: green; */
-	width: 100%;
+	max-width: 100%;
+	height: 100%;
 }
 
 .article{
+	width: 800px;
 	margin-bottom: 20px;
 	gap: 20px;
 }
 
-.article a{
+/* .article a{
 	font-size: 16px;
 	font-weight: 600;
 	text-decoration: none;
 	color: #D01117;
-}
+} */
 
 .article p, span{
-	font-size: 12px;
+	font-size: 16px;
 }
 
 .article span{
 	text-decoration: underline blue;
 	
 }
+
+.reasons{
+	/* background: green; */
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 30px;
+	padding: 30px 0px;
+}
+
+.reason{
+	
+	color: #D01117;
+	
+}
+
+.reason {flex-grow: 1;}
+
+.reason p{
+	padding-top: 15px;
+	color: #151414;
+	
+}
+
+.pictures{
+	/* background: green; */
+	height: 100%;
+}
+
+.picture {
+	position: relative;
+	border-radius: 4px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	/* background: green; */
+	transition: 0.4s;
+}
+
+.picture:hover{
+	transform: scale(1.05);
+	/* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+}
+
+.picture:nth-child(1){
+	top: 120px;
+	z-index: 3;
+	right: 20px;
+}
+
+.picture:nth-child(2){
+	top: 20px;
+	right: 80px;
+}
+/* .picture:nth-child(3){ */
+	/* top: 80px; */
+	/* left: 30%; */
+/* } */
 
 .social-media{
 	width: 40%;
@@ -429,4 +609,8 @@ form .btn:hover{
 	background: #FFFAFF;
 	color: #021212;
 	cursor: pointer;
+}
+
+iframe{
+	height: 300px;
 }

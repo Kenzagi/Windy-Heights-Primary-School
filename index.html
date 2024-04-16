@@ -22,36 +22,53 @@
 			</div>
 			
 			<div class="links-list">
-			<a class="link active" href="#" >About Us</a>
-			<a class="link" href="#Work">Gallery</a>
-			<a class="link" href="#Services">Blog</a>
-			<a class="link" href="#Contact">Contact Us</a>
-			<a class="link apply" href="#Contact">Apply</a>
+			<a class="link active" href="#" >Gallery</a>
+			<div class="dropdown">
+				<button class="dropbtn">About Us</button>
+				<div class="dropdown-content">
+					<a href="#">Staff</a>
+					<a href="#">Events</a>
+					<a href="#">Events</a>
+					<a href="#">Partners</a>
+					<a href="#">Extra-Mural Activities</a>
+				</div>
 			</div>
+			<div class="dropdown">
+				<button class="dropbtn">Learner Portal</button>
+				<div class="dropdown-content">
+					<a href="#">School Calendar</a>
+					<a href="#">Something</a>
+				</div>
+			</div>
+			<a class="link" href="#Contact">Contact Us</a>
+			<a class="link apply" href="style.css" id="apply" target="_blank" download>Apply</a>
+			</div>
+			
 		</nav>
+		
+		<!-------- DOWNLOAD BOX ------->
+		
+		<div class="application" id="popup">
+			<i class="fa-solid fa-square-check"></i>
+			<h3>Application form is downloading...</h3>
+			<!-- <button type="submit" href="style.css" download id="download">DOWNLOAD</button> -->
+		</div>
 		
 		
 		<!---------------- HERO SECTION ----------------->
 		
 		<div class="landing-page">
-			<div class="study-area section">
-				<div class="study area">
+			<div class="section">
+				<div class="study area" id="study">
 					<div>
 					<h1>Education is Progress</h2>
 					<p>We embrace cultural differences while putting education first in the modern schooling stystem.</p>
 					</div>
-					<a class="enroll" href="#">Enroll Here</a>
+					<a class="enroll" href="#gallery">Enroll Here</a>
 				</div>
 			</div>
-			<div class="gallery-area section">
-				<div class="gallery area">
-					<div>
-					<h1>See Our History</h2>
-					<p>Visit Wind Heights Primary School's history over the recent years and explore what makes our colors unique.</p>
-					</div>
-					<a class="enroll" href="#">Explore Gallery</a>
-				</div>
-			</div>
+			
+			
 		</div>
 		
 		
@@ -60,76 +77,72 @@
 		<div class="news-area">
 		
 			<div class="headers">
-				<h1>Latest articles<span class="line"></span></h1>
-				<h1>Connect with us<span class="line"></span></h1>
+				<h1>Our Mission<span class="line"></span></h1>
+				<!-- <h1>Connect with us<span class="line"></span></h1> -->
 			</div>
 			<div class="content">
-			<div class="articles">
+			<div class="content-area">
 				<div class="article">
-					<a href="#">Mayor of KZN visits Umlazi's best school.</a>
-					<p>Visit Wind Heights Primary School's history over the recent years...</p>
-					<span>read more</span>
-				</div>
-				<div class="article">
-					<a href="#">Mayor of KZN visits Umlazi's best school.</a>
-					<p>Visit Wind Heights Primary School's history over the recent years...</p>
-					<span>read more</span>
-				</div>
-				<div class="article">
-					<a href="#">Mayor of KZN visits Umlazi's best school.</a>
-					<p>Visit Wind Heights Primary School's history over the recent years...</p>
-					<span>read more</span>
-				</div>
-				<div class="article">
-					<a href="#">Mayor of KZN visits Umlazi's best school.</a>
-					<p>Visit Wind Heights Primary School's history over the recent years...</p>
-					<span>read more</span>
-				</div>
-				<div class="article">
-					<a href="#">Mayor of KZN visits Umlazi's best school.</a>
-					<p>Visit Wind Heights Primary School's history over the recent years...</p>
-					<span>read more</span>
+					<!-- <h3>Mayor of KZN visits Umlazi's best school.</h3> -->
+					<p>Windy Heights is a school that prepares children for higher level Education buy catering to every learner's skills and aptitude. We aim to bring life into the our pupils dreams and ambitions</p>
+					
+					<div class="reasons">
+						<div class="reason">
+							<h2>Joyful Learning</h2>
+							<p>Peek inside our classrooms, labs, and fine arts spaces, and you’ll see students who are engaged and excited to be active participants in their education. Content comes to life as our dedicated teachers tap into their students’  innate curiosity, creativity, and desire to problem solve.</p>
+						</div>
+						<div class="reason">
+							<h2>Individually Known, Loved, and Valued</h2>
+							<p>Small class sizes combined with committed teachers who are passionate about student success means each child at TFA is individually known, loved, and valued. Gifts and talents are identified and nurtured. Personalized attention is the norm, not the exception.</p>
+						</div>
+						<div class="reason">
+							<h2>Joyful Learning</h2>
+							<p>Peek inside our classrooms, labs, and fine arts spaces, and you’ll see students who are engaged and excited to be active participants in their education. Content comes to life as our dedicated teachers tap into their students’  innate curiosity, creativity, and desire to problem solve.</p>
+						</div>
+						<div class="reason">
+							<h2>Joyful Learning</h2>
+							<p>Peek inside our classrooms, labs, and fine arts spaces, and you’ll see students who are engaged and excited to be active participants in their education. Content comes to life as our dedicated teachers tap into their students’  innate curiosity, creativity, and desire to problem solve.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			
-			<div class="social-media">
+			<div class="content-area">
+				<div class="pictures">
+					<img class="picture" src="images/34.jpg" alt="school images" style="width: 200px"/>
+					<!-- <img class="picture" src="images/73.jpg" alt="school images"/ style="width: 200px"> -->
+					<img class="picture" src="images/56.jpg" alt="school images" style="width: 300px"/>
+				</div>
+			</div>
+			
+			<!-- <div class="social-media">
 				<a class="network" href="https://web.facebook.com/search/top?q=windy%20heights">Windy Heights Primary School <i class="fa-solid fa-blog"></i></a>
 				<a class="network" href="https://web.facebook.com/search/top?q=windy%20heights">Windy Heights Primary School <i class="fa-brands fa-square-facebook"></i></a>
 				<a class="network" href="https://web.facebook.com/search/top?q=windy%20heights">Windy Heights Primary School <i class="fa-brands fa-square-instagram"></i></a>
-			</div>
+			</div> -->
 			</div>
 		</div>
 		
 		<!-------------- FOOTER SECTION ----------------->
 		
-		<div class="footer">
+		<div class="footer" id="Contact">
 			<div>
 				<h2>Get in touch.</h2>
 				<p>for enquiries and other information, contact us.</p>
 				<ul>
-					<li><i class="fa-solid fa-location-crosshairs" style="color: #fffaff;"></i><a href="#">address: 132 Postum Rd, Umlazi, South Africa</a></li>
-					<li><i class="fa-solid fa-phone" style="color: #fffaff;"></i><a href="#">tel: 031 902 287</a></li>
-					<li><i class="fa-solid fa-envelope" style="color: #fffaff;"></i><a href="#">email: windyheightsprimary@gmail.com</a></li>
+					<li><i class="fa-solid fa-location-crosshairs" style="color: #fffaff;"></i><a href="#">132 Postum Rd, Umlazi, South Africa</a></li>
+					<li><i class="fa-solid fa-phone" style="color: #fffaff;"></i><a href="tel:031 902 2870">031 902 287</a></li>
+					<li><i class="fa-solid fa-envelope" style="color: #fffaff;"></i><a href="mailto:windyheightsprimary@gmail.com">windyheightsprimary@gmail.com</a></li>
 					
 				</ul>
 			</div>
 				<div class="contact-form">
-                    <form action="https://api.web3forms.com/submit" method="POST" >
-						<input type="hidden" name="access_key" value="7e5fb476-3c81-4606-9db4-f13c9b990649">
-						<div class="name-email">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email Address" required>
-						</div>
-						<div>
-                        <textarea name="Message" rows="6" placeholder="Message..." required></textarea>
-                        <button type="submit" class="btn btn2">Send Message</button>
-						</div>
-                    </form>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.4128671494295!2d30.89700497577883!3d-29.996299229045903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7ad2a76db185d%3A0x9452a4546bf435f6!2sWindy%20Heights%20Primary%20School!5e0!3m2!1sen!2sza!4v1712866745166!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 		</div>
 			
 	</div>
-	<script src="https://web3forms.com/client/script.js" async defer></script>
+
 <script src="script.js"></script>
 
 </body>
