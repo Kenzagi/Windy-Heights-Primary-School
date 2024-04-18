@@ -1,0 +1,55 @@
+.intro { 
+  text-align: center; 
+  margin-top: 120px;
+}
+
+h2 { 
+  font-size: 36px;
+}
+
+p { 
+  font-size: 14pt;
+}
+
+.gallery{
+	background: #FFFAFF;
+}
+
+#image-gallery {
+  width: 400px;
+  height: auto;
+  margin: 0 auto;
+  color: #151414;
+  text-align: center;
+	
+}
+
+#image-gallery p{
+	margin: 20px 0;
+}
+
+.thumb-wrapper{
+	width: 100%;
+	overflow: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#current-image { 
+  width: 100%;
+  background: green;
+} 
+
+#image-thumbs { 
+  display: flex; 
+  justify-content: center; 
+  margin-top: 20px;
+}
+
+.thumb {
+  width: 100px; 
+  height: 100px; 
+  object-fit: cover; 
+  margin-right: 10px; 
+  cursor: pointer;
+}

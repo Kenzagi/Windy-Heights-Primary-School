@@ -30,6 +30,7 @@ body{
 
 .about-section h1{
 	text-align: center;
+	color: #151414;
 }
 
 .line{
@@ -69,8 +70,10 @@ span{
 	justify-content: center;
 }
 
-.header{	
+.header{
+	/* background: blue; */
 	text-align: center;
+	color: #151414;
 }
 
 .partners{
@@ -80,25 +83,83 @@ span{
 	display: flex;
 	align-items: center; 
 	justify-content: center;
-	
+	flex-wrap: wrap;
 	
 	.partner{
-		background: red;
+		
 		width: 200px;
-		height: 200px;
+		height: 230px;
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		object-fit: cover;
+	}
+	
+	.partner img{
+		color: #FFFAFF;
+	}
+	
+	.staff {
+		align-items: end;
+		background: gray;
+		background-image: url(images/t1.jpg);
+	}
+	
+	.staff:nth-child(1n + n){
+		background-image: url(images/t2.jpg);
 	}
 }
 
-.partners-section p{
+p {
+	font-weight: 300;
+}
+
+.section p{
 	width: 50%;
 	text-align: center;
 	margin: 20px;
+	font-weight: 300;
+}
+
+.section {
+	/* width: 100%; */
+	padding: 20px 0px;
+	min-height: 10%;
+	background: #transparent;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.name-role {
+	width: 100%;
+	background: rgba(21, 20, 20, .8);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 8px;
+	
+	h3 {
+		font-size: 12px;
+		font-weight: 400;
+	}
+	
+	h4 {
+		font-size: 16px;
+		font-weight: 500;
+	}
+	
 }
 
 
 /* CALENDAR */
 
-.card {
+/* .card {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -225,5 +286,5 @@ span{
   font-size: 0.9rem;
   margin-right: 1px;
   box-shadow: 0px 0px 0px #efefef;
-}
+} */
 
