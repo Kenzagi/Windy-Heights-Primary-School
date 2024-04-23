@@ -14,23 +14,46 @@ apply.addEventListener('click', (event) => {
 })
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////
+
 // GALLERY CODE;
 
-var imageThumbs = document.getElementById("image-thumbs");
-var currentImage = document.getElementById("current-image");
+// Get the modal
+var modal = document.getElementById("myModal");
 
-for (var i = 1; i <= 105; i++) {
-	var thumb = document.createElement("img");
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+
+var modalImg = document.getElementById("image1");
+var captionText = document.getElementById("caption");
+
+
+var imageThumbs = document.getElementById("thumb-wrapper");
+var currentImage = document.getElementById("myImg");
+for (var i = 1; i <= 30; i++) {
+	let thumb = document.createElement('img');
 	thumb.src = "images/Gallery/" + i + ".jpg";
+	
 	thumb.alt = "Image " + i;
+	thumb.id = 'myImg';
 	thumb.classList.add("thumb");
 	imageThumbs.appendChild(thumb);
+	console.log(thumb);
 	
 	thumb.addEventListener(
   "click", function() {
-	currentImage.src = this.src;
-	currentImage.alt = this.alt;
-  }
-);
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+  });
 }
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -17,15 +17,16 @@
 }
 
 ::-webkit-scrollbar-thumb{
-	background: #D01117;
+	background: #F42626;
 }
 
 html{
 	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
 }
 
 body {
-	a, p, h2, h3, h4, button, li {
+	a, p, h2, h3, h4, button, li, th, td, span, input {
 		font-family: 'Nunito';
 	}
 }
@@ -33,7 +34,6 @@ body {
 .container{
     width: 100%;
     /* height: 100vh; */
-	background-color: #565c56;
 	overflow-x: hidden;
 	/* background-image: linear-gradient(0deg, #565c56 0%, #ebebeb 100%); */
 }
@@ -78,7 +78,7 @@ nav .home{
 	font-size: 28px;
 	font-weight: 600;
 	text-decoration: none;
-	color: #D01117;
+	color: #F42626;
 }
 
 .links-list {
@@ -98,15 +98,15 @@ nav .home{
 }
 
 .links-list .link:hover{
-	background-color: #D01117; 
+	background-color: #F42626; 
 	color: #FFFAFF;
 }
 
 .apply{
-	background: #D01117;
+	background: #F42626;
 	padding: 16px;
 	height: 50px;
-	border: 2px solid #D01117;
+	border: 2px solid #F42626;
 	display: flex;
 	align-items: center;
 	transition: .2s linear;
@@ -118,8 +118,8 @@ nav .home{
 
 .apply:hover{
 	background: transparent;
-	border: 2px solid #D01117;
-	color: #D01117;
+	border: 2px solid #F42626;
+	color: #F42626;
 }
 
 .link{
@@ -157,11 +157,11 @@ nav .home{
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #D01117; color: #FFFAFF;}
+.dropdown-content a:hover {background-color: #F42626; color: #FFFAFF;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #D01117; color: #FFFAFF;}
+.dropdown:hover .dropbtn {background-color: #F42626; color: #FFFAFF;}
 
 /*------------------------ Download Box ------------------------*/
 
@@ -170,8 +170,7 @@ nav .home{
 	height: 100px;
 	padding: 26px 16px;
 	border-radius: 4px;
-	background: #FFFAFF;
-	color: #151414;
+	background: #F42626;
 	position: fixed;
 	right: 3%;
 	top: -3%;
@@ -182,9 +181,17 @@ nav .home{
 	flex-direction: column;
 	z-index: 1;
 	font-size: 20px;
-	color: #bbb;
 	visibility: hidden;
 	transition: .6s;
+	
+	i {
+		color: #FFFAFF;
+	}
+	
+	h3{
+		font-size: 14px;
+		color: #FFFAFF;
+	}
 }
 
 .application:hover{
@@ -197,13 +204,9 @@ nav .home{
 	visibility: visible;
 }
 
-.application h3{
-	font-size: 14px;
-	color: #151414;	
-}
 
 /* .application button{
-	background: #D01117;
+	background: #F42626;
 	color: #FFFAFF;
 	border-radius: 4px;
 	font-size: 12px;
@@ -225,7 +228,7 @@ nav .home{
 	justify-content: space-evenly;
 }
 
-.landing-page .section{
+.section{
 	width: 100%;
 	height: 100%;
 	background-size: cover;
@@ -235,8 +238,11 @@ nav .home{
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
-	background-image: url(images/home-background.jpg);
 	position: relative;
+}
+
+.landing-page .section{
+	background-image: url(images/home-background.jpg);
 }
 
 .section .area {
@@ -361,7 +367,7 @@ nav .home{
 	width: 50%;
 	height: 6px;
 	border-radius: 2px;
-	background: #D01117;
+	background: #F42626;
 }
 
 .content-area{
@@ -381,7 +387,7 @@ nav .home{
 	font-size: 16px;
 	font-weight: 600;
 	text-decoration: none;
-	color: #D01117;
+	color: #F42626;
 } */
 
 .article p, span{
@@ -406,7 +412,7 @@ nav .home{
 }
 
 .reason{
-	color: #D01117;
+	color: #F42626;
 }
 
 ol{
@@ -462,11 +468,19 @@ ol{
 	width: 100%;
 	height: auto;
 	background: #FFFAFF;
-	padding: 30px 50px;
 	display: flex;
+	flex-direction: column;
 	align-items: start;
 	justify-content: space-between;
-	border-top: 2px solid #D01117;
+	border-top: 2px solid #F42626;
+}
+
+.footer-content{
+	width: 100%;
+	padding: 30px 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .footer div{
@@ -474,8 +488,8 @@ ol{
 }
 
 .footer p{
-	color: #D01117;
-	font-size: 13px;
+	color: #FFFAFF;
+	font-size: 15px;
 }
 
 .footer ul {
@@ -495,7 +509,7 @@ ul li{
 	/* background: white; */
 	font-size: 20px;
 	font-weight: 400;
-	color: #D01117;
+	color: #F42626;
 	font-weight: 400;
 	display: flex;
 	align-items: center;
@@ -504,7 +518,7 @@ ul li{
 
 li a{
 	min-height: 45px;
-	color: #D01117;
+	color: #F42626;
 	font-size: 16px;
 	text-decoration: none;
 	font-weight: 400;
@@ -512,7 +526,7 @@ li a{
 }
 
 li a i{
-	color: #D01117;
+	color: #F42626;
 }
 
 .details{
@@ -527,7 +541,7 @@ li a i{
 
 .social-media .network{
 	background: #FFFAFF;
-	color: #D01117;
+	color: #F42626;
 	border-radius: 50px;
 	display: flex;
 	align-items: center;
@@ -555,4 +569,57 @@ li a i{
 
 iframe{
 	min-height: 100%;
+}
+
+
+/*------------------------ News Letter ------------------------*/
+
+.newsletter{
+	background-color: #F42626;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 100px;
+	min-height: 120px;
+}
+
+.newsletter h2{
+	font-size: 30px;
+	font-weight: 600;
+	padding: 0;
+	color: #FFFAFF;
+}
+
+
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+.email-box{
+	border-radius: 8px;
+	height: 55px;
+	width: 300px;
+	font-size: 18px;
+	background: #FFFAFF;
+	font-size: 14px;
+	padding: 0px 16px;
+	border: none;
+	outline: none;
+	
+}
+form button{
+	height: 55px;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 16px;
+	color: #FFFAFF;
+	font-weight: 500;
+	background: #01027A;
+	border: none;
+	outline: none;
+	border-radius: 8px;
 }

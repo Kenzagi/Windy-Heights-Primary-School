@@ -3,12 +3,17 @@
   margin-top: 120px;
 }
 
-h2 { 
-  font-size: 36px;
+
+.newsletter h2{
+	font-size: 30px;
+	font-weight: 600;
+	padding: 0;
 }
 
-p { 
-  font-size: 14pt;
+.gallery p { 
+  /* font-size: 14pt; */
+  Width: 80%;
+  text-align: center;
 }
 
 .gallery{
@@ -29,15 +34,24 @@ p {
 }
 
 .thumb-wrapper{
-	width: 100%;
+	min-width: 300px;
+	min-height: 200px;
 	overflow: auto;
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
+	gap: 20px;
+	padding: 20px 0px;
+}
+
+.thumb-wrapper img{
+	min-width: 120px;
+	height: 140px;
+	cursor: zoom-in;
 }
 
 #current-image { 
   width: 100%;
-  background: green;
 } 
 
 #image-thumbs { 
@@ -52,4 +66,102 @@ p {
   object-fit: cover; 
   margin-right: 10px; 
   cursor: pointer;
+}
+
+
+/*sdddddssssssssssssssssssssssssssss*/
+
+#myImg {
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.thumb-wrapper:hover > :not(:hover) {
+	opacity: 0.9;
+	filter: grayscale(50%);
+}
+
+#myImg:hover {
+	transform: scale(1.1);
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 30px; /* Location of the box */
+  left: 0;
+  top: 10%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 50%;
+  max-width: 400px;
+  border-radius: 4px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  background: transparent;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
 }
