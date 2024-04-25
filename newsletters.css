@@ -1,0 +1,75 @@
+.newsletters {
+	padding-top: 120px;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	
+	p{
+		margin: 20px 0;
+		width: 60%;
+		text-align: center;
+	}
+	
+	.news-letters{
+		width: 100%;
+		padding: 20px 50px;
+		
+		
+		h2{
+			color: #F42626;
+		}
+		
+		
+		.issue{
+			padding-top: 20px;
+			display: flex;
+			align-items: start;
+			justify-content: space-between;
+			
+			
+			.dates{
+				width: 80%;
+				display: flex;
+				align-items: start;
+				justify-content: left;
+				gap:120px;
+				
+				div{
+					max-width: 500px;
+				}
+				
+				.issue-info{
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					font-size: 20px;
+					background-color: #F42626;
+					color: #FFFAFF;
+					border-radius: 4px;
+					padding: 8px 16px;
+					
+					span a i {
+						font-size: 22px;
+						color: rgba(21, 20, 20, 1);
+						padding: 0px 8px;
+					}
+					
+				}
+				
+				div p{
+					width: 100%;
+					text-align: left;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
