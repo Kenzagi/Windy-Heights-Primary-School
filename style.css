@@ -122,7 +122,33 @@ nav .home{
 	color: #F42626;
 }
 
-.link{
+.sidebar {
+	display: none;
+	padding: 20px;
+	z-index: 999;
+	
+	.apply {
+		width: 100%;
+		text-align: center;
+		display: none;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.link:last-child{
+		display: flex;
+	}
+	
+	i{
+		font-size: 20px;
+	}
+}
+
+.links-list .link:last-child{
+	display: none;
+}
+
+.links-list .link, .dropbtn{
 	display: flex;
 }
 
@@ -173,15 +199,15 @@ nav .home{
 	background: #F42626;
 	position: fixed;
 	right: 3%;
-	top: -3%;
+	top: 50px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
 	flex-direction: column;
-	z-index: 1;
+	z-index: 999;
 	font-size: 20px;
-	visibility: hidden;
+	visibility: visible;
 	transition: .6s;
 	
 	i {
@@ -294,7 +320,6 @@ nav .home{
 	color: #FFFAFF;
 }
 
-
 .area h1{
 	font-weight: 500;
 	font-size: 45px;
@@ -331,7 +356,7 @@ nav .home{
 .news-area {
 	height: 100vh;
 	width: 100%;
-	padding: 30px 30px;
+	padding: 30px;
 	display: flex;
 	flex-direction: column;
 	align-items: start;
@@ -359,12 +384,12 @@ nav .home{
 .headers{
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	width: 90%;
+	justify-content: center;
+	width: 100%;
 }
 
 .line{
-	width: 50%;
+	width: 100%;
 	height: 6px;
 	border-radius: 2px;
 	background: #F42626;
@@ -449,9 +474,11 @@ ol{
 	top: 120px;
 	z-index: 3;
 	right: 20px;
+	width: 200px;
 }
 
 .picture:nth-child(2){
+	width: 300px;
 	top: 20px;
 	right: 80px;
 }
@@ -531,6 +558,14 @@ li a i{
 
 .details{
 	width: 80%;
+	
+	h2{
+		font-size: 30px;
+	}
+	
+	p{
+		color: #151414;
+	}
 }
 
 .contact-info {
@@ -572,7 +607,7 @@ iframe{
 }
 
 
-/*------------------------ News Letter ------------------------*/
+/*------------------------ NewsLetter Link ------------------------*/
 
 .newsletter{
 	background-color: #F42626;
@@ -581,45 +616,20 @@ iframe{
 	align-items: center;
 	justify-content: center;
 	gap: 100px;
-	min-height: 120px;
-}
-
-.newsletter h2{
-	font-size: 30px;
-	font-weight: 600;
-	padding: 0;
-	color: #FFFAFF;
-}
-
-
-form {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 8px;
-}
-
-.email-box{
-	border-radius: 8px;
-	height: 55px;
-	width: 300px;
-	font-size: 18px;
-	background: #FFFAFF;
-	font-size: 14px;
-	padding: 0px 16px;
-	border: none;
-	outline: none;
+	min-height: 100px;
 	
+	
+	a{
+		text-decoration: none;
+		font-size: 25px;
+		font-weight: 600;
+		padding: 0;
+		color: #FFFAFF;
+		transition: .4s ease;
+	}
+	
+	a:hover{
+		text-decoration: underline;
+	}
 }
-form button{
-	height: 55px;
-	font-size: 14px;
-	text-transform: uppercase;
-	padding: 16px;
-	color: #FFFAFF;
-	font-weight: 500;
-	background: #01027A;
-	border: none;
-	outline: none;
-	border-radius: 8px;
-}
+

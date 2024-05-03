@@ -7,6 +7,10 @@
 	align-items: center;
 	
 	
+	.header .line{
+		width: 100%;
+	}
+	
 	p{
 		margin: 20px 0;
 		width: 60%;
@@ -46,7 +50,7 @@
 					align-items: center;
 					justify-content: space-between;
 					font-size: 20px;
-					background-color: #F42626;
+					background-color: rgba(244, 38, 38, 0.9);
 					color: #FFFAFF;
 					border-radius: 4px;
 					padding: 8px 16px;
@@ -64,6 +68,42 @@
 					text-align: left;
 					font-size: 14px;
 				}
+			}
+		}
+	}
+}
+
+
+/************ NEWSLETTER MOBILE PAGE STYLING ***********/
+
+@media (max-width: 430px) {
+	
+	.newsletters{
+		
+	.header .line{
+		width: 100%;
+	}
+	
+	p{
+		width: 90%;
+	}
+	
+	.news-letters{
+		padding: 20px;
+		
+		h2{
+			margin-bottom: 10px;
+		}
+		
+		.issue{
+			flex-direction: column;
+			
+			.dates{
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap:20px;
 			}
 		}
 	}
