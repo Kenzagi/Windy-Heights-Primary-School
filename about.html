@@ -23,6 +23,35 @@
 				<a href="index.html">Windy Heights Primary</a>
 			</div>
 			
+			<!-------- MOBILE SCREEN NAVBAR  ------->
+			
+			<div class="links-list sidebar">
+			<a class="link" onclick=closeSidebar() ><i class="fa-solid fa-xmark"></i></a>
+			<a class="link active" href="index.html" onclick=closeSidebar()>Home</a>
+			<a class="link" href="gallery.html" onclick=closeSidebar() >Gallery</a>
+			<div class="dropdown">
+				<button class="dropbtn">About Us</button>
+				<div class="dropdown-content">
+					<a href="about.html"  onclick=closeSidebar()>History</a>
+					<a href="about.html#Staff" onclick=closeSidebar()>Staff</a>
+					<a href="about.html#Partners" onclick=closeSidebar()>Partners</a>
+					<a href="newsletters.html" onclick=closeSidebar()>Newsletter</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn">Learner Portal</button>
+				<div class="dropdown-content">
+					<a href="calendar.html" onclick=closeSidebar()>School Calendar</a>
+					<a href="#" onclick=closeSidebar()>Regulations & Conduct</a>
+				</div>
+			</div>
+			<a class="link" href="#Contact" onclick=closeSidebar()>Contact Us</a>
+			<a class="link apply" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=closeSidebar()>Apply</a>
+			
+			</div>
+			
+			<!-------- DESKTOP NAVBAR  ------->
+			
 			<div class="links-list">
 			<a class="link active" href="index.html" >Home</a>
 			<a class="link" href="gallery.html" >Gallery</a>
@@ -43,7 +72,8 @@
 				</div>
 			</div>
 			<a class="link" href="#Contact">Contact Us</a>
-			<a class="link apply" href="#" id="apply" target="_blank" download>Apply</a>
+			<a class="link apply" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox() >Apply</a>
+			<a class="link navBtn" onclick=showSidebar() ><i class="fa-solid fa-bars"></i></a>
 			</div>
 			
 		</nav>
@@ -96,9 +126,17 @@ Windy Heights is a quintile 2, no-fee, primary school situated in the heart of M
 		<p>Partnering organizations can greatly benefit schools by providing resources, expertise, and real-world perspectives that enrich the educational experience. They can offer mentoring and helping students connect classroom learning to future careers. Collaboration can also lead to funding, grants, and improved community relations, fostering a positive school culture and enhancing the overall quality of education.</p>
 		
 		<div class="partners">
-			<div class="partner"><img src="images/unilever-logo.svg" alt="unilever logo"/></div>
-			<div class="partner"><img src="images/Oxford-High-School-logo.svg" alt="Oxford-High-School-logo"/></div>
-			<div class="partner"><img src="images/skype-logo.svg" alt="skype logo"/></div>
+			<div class="partner"><img src="images/Content/school-partners/Always Pads.jpg" alt="always pads logo"/></div>
+			<div class="partner"><img src="images/Content/school-partners/Black Coffee Foundation.jpg" alt="Black Coffee Foundation logo"/></div>
+			<div class="partner"><img src="images/Content/school-partners/Gift of the Givers Foundation.jpg" alt="Gift of the Givers Foundation logo"/></div>
+			<div class="partner"><img src="images/Content/school-partners/Ignition Group.jpg" alt="Ignition Group logo"/></div>
+			<div class="partner"><img src="images/Content/school-partners/KCAP.jpg" alt="KCAP.jpg logo"/></div>
+			<div class="partner"><img src="images/Content/school-partners/Kelloggs.jpg" alt="Kelloggs logo"/></div>
+			<div class="partner"><img src="images/Content/school-partners/KZN Philharmonic Orchestra.jpg" alt="KZN Philharmonic Orchestra logo"/></div>
+			<div class="partner"><img src="images/Content/school-partners/KZN RUGBY UNION !.jpg" alt="KZN RUGBY UNION logo"/></div>
+			<div class="partner"><img src="images/Content/school-partners/KZN Rugby Union.jpg" alt="KZN Rugby Union logo"/></div>
+			<div class="partner"><img src="images/Content/school-partners/Nalibali.jpg" alt="Nalibali logo"/></div>
+			<div class="partner"><img src="images/Content/school-partners/Umbumbulu Coastal KZN TVET Colllege.jpg" alt="Umbumbulu Coastal KZN TVET Colllege logo"/></div>
 		</div>
 		</div>
 		

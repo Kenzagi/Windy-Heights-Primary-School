@@ -22,6 +22,35 @@
 				<a href="index.html">Windy Heights Primary</a>
 			</div>
 			
+			<!-------- MOBILE SCREEN NAVBAR  ------->
+			
+			<div class="links-list sidebar">
+			<a class="link" onclick=closeSidebar() ><i class="fa-solid fa-xmark"></i></a>
+			<a class="link active" href="index.html" onclick=closeSidebar()>Home</a>
+			<a class="link" href="gallery.html" onclick=closeSidebar() >Gallery</a>
+			<div class="dropdown">
+				<button class="dropbtn">About Us</button>
+				<div class="dropdown-content">
+					<a href="about.html"  onclick=closeSidebar()>History</a>
+					<a href="about.html#Staff" onclick=closeSidebar()>Staff</a>
+					<a href="about.html#Partners" onclick=closeSidebar()>Partners</a>
+					<a href="newsletters.html" onclick=closeSidebar()>Newsletter</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn">Learner Portal</button>
+				<div class="dropdown-content">
+					<a href="calendar.html" onclick=closeSidebar()>School Calendar</a>
+					<a href="#" onclick=closeSidebar()>Regulations & Conduct</a>
+				</div>
+			</div>
+			<a class="link" href="#Contact" onclick=closeSidebar()>Contact Us</a>
+			<a class="link apply" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=closeSidebar()>Apply</a>
+			
+			</div>
+			
+			<!-------- DESKTOP NAVBAR  ------->
+			
 			<div class="links-list">
 			<a class="link active" href="index.html" >Home</a>
 			<a class="link" href="gallery.html" >Gallery</a>
@@ -42,7 +71,8 @@
 				</div>
 			</div>
 			<a class="link" href="#Contact">Contact Us</a>
-			<a class="link apply" href="#" id="apply">Apply</a>
+			<a class="link apply" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox() >Apply</a>
+			<a class="link navBtn" onclick=showSidebar() ><i class="fa-solid fa-bars"></i></a>
 			</div>
 			
 		</nav>

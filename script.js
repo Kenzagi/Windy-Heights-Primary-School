@@ -1,17 +1,18 @@
 
 // DOWNLOADING APPLICATION FORM;
 const applyBtn = document.getElementById('apply');
-apply.addEventListener('click', (event) => {
+const popup = document.getElementById('popup');
+function showBox(){
     // getting the text content that we want to copy
     // const content = document.getElementById('email').textContent;
     // loading the content into our clipboard
     // navigator.clipboard.writeText(content);
-	
+	console.log("33274623423462347246723");
 	popup.classList.add("downloading");
 	setTimeout(() => {
 		popup.classList.remove("downloading");
 	}, 8000);
-})
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

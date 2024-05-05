@@ -1,6 +1,13 @@
 .intro { 
-  text-align: center; 
-  margin-top: 120px;
+	text-align: center; 
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	.line{
+		Width: 120px;
+	}
 }
 
 
@@ -12,12 +19,14 @@
 
 .gallery p { 
   /* font-size: 14pt; */
-  Width: 80%;
+  width: 100%;
+  padding: 0px 20rem;
   text-align: center;
 }
 
 .gallery{
 	background: #FFFAFF;
+	padding-top: 120px;
 }
 
 #image-gallery {
@@ -166,10 +175,11 @@
 
 /************ GALLERY MOBILE PAGE STYLING ***********/
 
-@media (max-width: 430px) {
+@media only screen and (max-width: 800px) {
 	
 	.gallery {
 			padding: 10px;
+			padding-top: 120px;
 	
 		p{
 			width: 100%;

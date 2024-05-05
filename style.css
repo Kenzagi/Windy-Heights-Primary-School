@@ -199,15 +199,15 @@ nav .home{
 	background: #F42626;
 	position: fixed;
 	right: 3%;
-	top: 50px;
+	top: 5px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 10px;
+	gap: 15px;
 	flex-direction: column;
-	z-index: 999;
+	z-index: 1;
 	font-size: 20px;
-	visibility: visible;
+	visibility: hidden;
 	transition: .6s;
 	
 	i {
@@ -220,13 +220,16 @@ nav .home{
 	}
 }
 
-.application:hover{
+
+
+/* .application:hover{
 	background: #FFFAFF;
-}
+} */
 .downloading{
 	/* max-width: 500px; */
 	/* padding: 16px; */
-	top: 11%;
+	
+	top: 100px;
 	visibility: visible;
 }
 
@@ -294,7 +297,7 @@ nav .home{
 
 /*------------------------ Study Area ------------------------*/
 
-.landing-page .study, .gallery{
+.landing-page .study{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -354,7 +357,7 @@ nav .home{
 /*------------------------ NEWS AREA ------------------------*/
 
 .news-area {
-	height: 100vh;
+	max-height: 100vh;
 	width: 100%;
 	padding: 30px;
 	display: flex;
@@ -397,15 +400,18 @@ nav .home{
 
 .content-area{
 	padding: 20px;
-	/* background: green; */
-	max-width: 100%;
-	height: 100%;
+	width: 100%;
+	height: auto;
 }
 
 .article{
-	width: 800px;
+	width: 100%;
 	margin-bottom: 20px;
 	gap: 20px;
+	
+	p{
+		text-align: center;
+	}
 }
 
 /* .article a{
@@ -426,6 +432,7 @@ nav .home{
 
 .reasons{
 	/* background: green; */
+	width: 100%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -438,6 +445,12 @@ nav .home{
 
 .reason{
 	color: #F42626;
+	width: 100%;
+	
+	.vision{
+		width: 100%;
+		text-align: center;
+	}
 }
 
 ol{
@@ -454,14 +467,15 @@ ol{
 
 .pictures{
 	/* background: green; */
-	height: 100%;
+	height: auto;
+	background: yellow;
 }
 
 .picture {
 	position: relative;
 	border-radius: 4px;
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	/* background: green; */
+	
 	transition: 0.4s;
 }
 
@@ -471,9 +485,9 @@ ol{
 }
 
 .picture:nth-child(1){
-	top: 120px;
+	top: 0;
 	z-index: 3;
-	right: 20px;
+	right: 0;
 	width: 200px;
 }
 
