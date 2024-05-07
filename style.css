@@ -323,7 +323,6 @@ nav .home{
 .area {
 	
 	h1{
-		color: #F42626;
 		font-weight: 600;
 		font-size: 65px;
 		font-family: "Ubuntu";
@@ -336,7 +335,7 @@ nav .home{
 	}
 	
 	div:hover{
-		background: rgba(5, 6, 9, .2);
+		background: rgba(5, 6, 9, .4);
 	}
 }
 
@@ -519,7 +518,7 @@ ol{
 .footer{
 	width: 100%;
 	height: auto;
-	background: #FFFAFF;
+	background-color: #FFFAFF;
 	display: flex;
 	flex-direction: column;
 	align-items: start;
