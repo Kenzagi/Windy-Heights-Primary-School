@@ -9,9 +9,10 @@ function showBox(){
     // navigator.clipboard.writeText(content);
 	console.log("33274623423462347246723");
 	popup.classList.add("downloading");
+	closeSidebar();
 	setTimeout(() => {
 		popup.classList.remove("downloading");
-	}, 8000);
+	}, 6000);
 }
 
 
