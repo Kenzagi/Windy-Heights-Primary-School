@@ -27,10 +27,9 @@ html{
 	scroll-snap-type: y mandatory;
 }
 
-body {
-	a, p, h2, h3, h4, button, li, th, td, span, input {
-		font-family: 'Nunito';
-	}
+
+body a, p, h2, h3, h4, button, li, th, td, span, input {
+	font-family: 'Nunito';
 }
 
 .container{
@@ -128,22 +127,22 @@ nav .home{
 	display: none;
 	padding: 20px;
 	z-index: 999;
-	
-	.apply {
-		width: 100%;
-		text-align: center;
-		display: none;
-		align-items: center;
-		justify-content: center;
-	}
-	
-	.link:last-child{
-		display: flex;
-	}
-	
-	i{
-		font-size: 20px;
-	}
+}
+
+.sidebar .apply {
+	width: 100%;
+	text-align: center;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.sidebar .link:last-child{
+	display: flex;
+}
+
+.sidebar i{
+	font-size: 20px;
 }
 
 .links-list .link:last-child{
@@ -211,15 +210,15 @@ nav .home{
 	font-size: 20px;
 	visibility: hidden;
 	transition: .6s;
-	
-	i {
-		color: #FFFAFF;
-	}
-	
-	h3{
-		font-size: 14px;
-		color: #FFFAFF;
-	}
+}
+
+.application i {
+	color: #FFFAFF;
+}
+
+.application h3{
+	font-size: 14px;
+	color: #FFFAFF;
 }
 
 
@@ -320,23 +319,20 @@ nav .home{
 	transition: .4s ease;
 }
 
-.area {
+.area div:hover{
+	background: rgba(5, 6, 9, .4);
+}
+
+.area h1{
+	font-weight: 600;
+	font-size: 65px;
+	font-family: "Ubuntu";
+}
 	
-	h1{
-		font-weight: 600;
-		font-size: 65px;
-		font-family: "Ubuntu";
-	}
-	
-	h3{
-		font-family: "Ubuntu";
-		font-weight: 400;
-		font-size: 35px;
-	}
-	
-	div:hover{
-		background: rgba(5, 6, 9, .4);
-	}
+.area h3{
+	font-family: "Ubuntu";
+	font-weight: 400;
+	font-size: 35px;
 }
 
 .area p{
@@ -418,10 +414,10 @@ nav .home{
 	width: 100%;
 	margin-bottom: 20px;
 	gap: 20px;
-	
-	p{
-		text-align: center;
-	}
+}
+
+.article p{
+	text-align: center;
 }
 
 /* .article a{
@@ -456,11 +452,11 @@ nav .home{
 .reason{
 	color: #F42626;
 	width: 100%;
-	
-	.vision{
-		width: 100%;
-		text-align: center;
-	}
+}
+
+.reason .vision{
+	width: 100%;
+ 	text-align: center;
 }
 
 ol{
@@ -582,14 +578,14 @@ li a i{
 
 .details{
 	width: 80%;
-	
-	h2{
-		font-size: 30px;
-	}
-	
-	p{
-		color: #151414;
-	}
+}
+
+.details h2{
+	font-size: 30px;
+}
+
+.details p{
+	color: #151414;
 }
 
 .contact-info {
@@ -641,19 +637,18 @@ iframe{
 	justify-content: center;
 	gap: 100px;
 	min-height: 100px;
-	
-	
-	a{
-		text-decoration: none;
-		font-size: 25px;
-		font-weight: 600;
-		padding: 0;
-		color: #FFFAFF;
-		transition: .4s ease;
-	}
-	
-	a:hover{
-		text-decoration: underline;
-	}
+}
+
+.newsletter a{
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: 600;
+	padding: 0;
+	color: #FFFAFF;
+	transition: .4s ease;
+}
+
+.newsletter a:hover{
+	text-decoration: underline;
 }
 

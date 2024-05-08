@@ -5,64 +5,61 @@ nav{
 	
 	padding: 12px 10px;
 	
-	.home {
-		
-		
-		a{
-			font-size: 22px;
-			visibility: visible;
-		}
-	}
+}
+
+nav	.home a{
+	font-size: 22px;
+	visibility: visible;
+}
+
+nav .links-list {
+	font-size: 16px;
+	display: flex;
+}
+
+nav .sidebar{
+	background-color: #FFFAFF;
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: auto;
+	width: 100%;
+	display: none;
+	flex-direction: column;
+	align-items: start;
+	justify-content: flex-start;
+	padding: 20px;
+	font-size: 16px;
+	z-index: 999;
+}
 	
-	.links-list {
-		font-size: 16px;
-		display: flex;
-		
-		
-		button{
-			font-size: 14px;
-		}
-	}
+.sidebar .apply {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+nav .sidebar button{
+	font-size: 16px;
+}
+
+.sidebar .dropbtn{
+	display: flex;
+}
 	
-	.sidebar{
-		background-color: #FFFAFF;
-		position: fixed;
-		top: 0;
-		right: 0;
-		height: auto;
-		width: 100%;
-		display: none;
-		flex-direction: column;
-		align-items: start;
-		justify-content: flex-start;
-		padding: 20px;
-		font-size: 16px;
-		z-index: 999;
-	
-		.apply {
-			width: 100%;
-			text-align: center;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		
-		button{
-			font-size: 16px;
-		}
-		
-		.dropbtn{
-			display: flex;
-		}
-	
-		.link{
-			display: flex;
-		}
-	}
-	
-	.navBtn{
-		display: flex;
-	}
+nav .sidebar .link{
+	display: flex;
+}
+
+
+nav .navBtn{
+	display: flex;
+}
+
+.links-list button{
+	font-size: 14px;
 }
 
 .links-list .link, .dropbtn{
@@ -85,42 +82,38 @@ nav{
 
 .landing-page{
 	width: 100%;
-	height: 60vh;
-	
-	.area{
-		
-		div{ background: rgba(5, 6, 9, .4); }
-		
-		h1{
-			font-weight: 600;
-			font-size: 45px;
-		}
-		
-		h3{
-			padding-top: 20px;
-			font-weight: 400;
-			font-size: 20px;
-		}
+	height: 75vh;
+}
+
+.landing-page .area{
 	}
+	
+.area div{ background: rgba(5, 6, 9, .4); }
+
+.area h1{
+	font-weight: 600;
+	font-size: 45px;
+}
+
+.area h3{
+	padding-top: 20px;
+	font-weight: 400;
+	font-size: 20px;
 }
 
 /************ MISSION STATEMENT AREA STYLING ***********/
 
 .news-area {
 	padding: 20px;
-	
-	.content{
-		/* background: yellow; */
-		
-		.content-area{
-			padding: 20px 0;
-				
-		}
-			.article{
-				width: 100%;
-				margin-bottom: 20px;
-			}
+}
+
+.content .content-area{
+		padding: 20px 0;
 	}
+	
+.article{
+	width: 100%;
+	margin-bottom: 20px;
 }
 
 .picture:nth-child(1){
