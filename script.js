@@ -30,7 +30,7 @@ var captionText = document.getElementById("caption");
 
 
 var imageThumbs = document.getElementById("thumb-wrapper");
-var currentImage = document.getElementById("myImg");
+// var currentImage = document.getElementById("myImg");
 for (var i = 1; i <= 30; i++) {
 	let thumb = document.createElement('img');
 	thumb.src = "images/Gallery/" + i + ".jpg";
@@ -45,7 +45,7 @@ for (var i = 1; i <= 30; i++) {
   "click", function() {
   modal.style.display = "block";
   modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
+  // captionText.innerHTML = this.alt;
   });
 }
 
