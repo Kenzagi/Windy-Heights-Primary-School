@@ -595,14 +595,17 @@ li a i{
 }
 
 .social-media .network{
-	background: #FFFAFF;
+	gap: 12px;
+	width: auto;
 	color: #F42626;
-	border-radius: 50px;
+	text-decoration: none;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 40px;
-	width: 40px;
+}
+
+.network:hover{
+	text-decoration: underline;
 }
 
 .network i{
