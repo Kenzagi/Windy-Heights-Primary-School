@@ -1,6 +1,10 @@
+body{
+	/* background: #FFFAFF; */
+}
+
 .newsletters {
 	margin-top: 120px;
-	background: #FFFAFF;
+	/* background: #FFFAFF; */
 	height: 100vh;
 	width: 100%;
 	display: flex;
@@ -11,7 +15,7 @@
 .news-letters{
 	width: 100%;
 	padding: 20px 50px;
-	background: #FFFAFF;
+	/* background: #FFFAFF; */
 }
 
 .w3-container{
@@ -167,6 +171,7 @@
 }
 
 .year{
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
 	backdrop-filter: blur(0px);
 	-webkit-backdrop-filter: blur(0px);
 	padding: 20px 0px;
@@ -191,6 +196,10 @@
 	width: 100%;
 	flex-wrap: wrap;
 	gap: 4px;
+}
+
+.tablink:hover{
+	background: #F42626;
 }
 
 .tablink{
@@ -227,7 +236,7 @@
 
 .issue{
 	padding: 8px;
-	background: #FFFAFF;
+	/* background: #FFFAFF; */
 	min-height: 500px;
 	width: 350px;
 	display: flex;
