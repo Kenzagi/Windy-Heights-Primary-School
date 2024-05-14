@@ -31,7 +31,7 @@ var captionText = document.getElementById("caption");
 
 var imageThumbs = document.getElementById("thumb-wrapper");
 // var currentImage = document.getElementById("myImg");
-for (var i = 1; i <= 30; i++) {
+for (var i = 1; i <= 127; i++) {
 	let thumb = document.createElement('img');
 	thumb.src = "images/Gallery/" + i + ".jpg";
 	
@@ -67,4 +67,22 @@ function closeSidebar(){
 function showSidebar(){
 	const sidebar= document.querySelector('.sidebar');
 	sidebar.style.display = 'flex';
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+function openCity(evt, period) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("year");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
+  }
+  document.getElementById(period).style.display = "flex";
+  evt.currentTarget.className += " active-tab";
 }
