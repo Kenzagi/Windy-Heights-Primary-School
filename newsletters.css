@@ -1,10 +1,10 @@
 body{
-	/* background: #FFFAFF; */
+	background: #FFFAFF;
 }
 
 .newsletters {
 	margin-top: 120px;
-	/* background: #FFFAFF; */
+	background: #FFFAFF;
 	height: 100vh;
 	width: 100%;
 	display: flex;
@@ -15,7 +15,7 @@ body{
 .news-letters{
 	width: 100%;
 	padding: 20px 50px;
-	/* background: #FFFAFF; */
+	background: #FFFAFF;
 }
 
 .w3-container{
