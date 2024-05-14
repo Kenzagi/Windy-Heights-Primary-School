@@ -1,5 +1,6 @@
 .newsletters {
 	margin-top: 120px;
+	background: #FFFAFF;
 	height: 100vh;
 	width: 100%;
 	display: flex;
@@ -10,6 +11,7 @@
 .news-letters{
 	width: 100%;
 	padding: 20px 50px;
+	background: #FFFAFF;
 }
 
 .w3-container{
@@ -167,6 +169,7 @@
 .year{
 	backdrop-filter: blur(0px);
 	-webkit-backdrop-filter: blur(0px);
+	padding: 20px 0px;
 }
 	
 .issue .dates{
