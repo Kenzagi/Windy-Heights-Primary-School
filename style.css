@@ -107,7 +107,7 @@ nav .home{
 	background: #F42626;
 	padding: 16px;
 	height: 50px;
-	border: 2px solid #F42626;
+	/* border: 2px solid #F42626; */
 	display: flex;
 	align-items: center;
 	transition: .2s linear;
@@ -119,8 +119,9 @@ nav .home{
 
 .apply:hover{
 	background: transparent;
-	border: 2px solid #F42626;
+	/* border: 2px solid #F42626; */
 	color: #F42626;
+	border-radius: 4px;
 }
 
 .sidebar {
@@ -683,7 +684,7 @@ iframe{
 	align-items: center;
 	justify-content: center;
 	gap: 100px;
-	min-height: 100px;
+	min-height: 80px;
 }
 
 .newsletter a{
@@ -775,6 +776,7 @@ iframe{
 }
 
 .numbertext p{
+	font-weight: 300;
 	font-size: 22px;
 	text-align: center;
 }
@@ -784,7 +786,8 @@ iframe{
 	font-size: 16px;
 	padding: 16px;
 	height: 40px;
-	color: #F42626;
+	color: #FFFAFF;
+	background: #F42626;
 	border-radius: 2px;
 	display: flex;
 	align-items: center;
@@ -794,8 +797,9 @@ iframe{
 }
 
 .numbertext a:hover{
-	background: #F42626;
+	background: transparent;
 	color: #FFFAFF;
+	border: 2px solid #FFFAFF;
 }
 /* The dots/bullets/indicators */
 .dot {
@@ -853,6 +857,11 @@ iframe{
 	background: #F42626;
 	color: #FFFAFF;
 }
+/* 
+.mySlides img {
+    vertical-align: middle;
+	min-width: 800px;
+} */
 
 }
 
