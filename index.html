@@ -25,7 +25,7 @@
 			
 			<div class="links-list sidebar">
 			<a class="link" onclick=closeSidebar() ><i class="fa-solid fa-xmark"></i></a>
-			<a class="link active" href="index.html" onclick=closeSidebar()>Home</a>
+			<a class="link" href="index.html" onclick=closeSidebar()>Home</a>
 			<a class="link" href="gallery.html" onclick=closeSidebar() >Gallery</a>
 			<div class="dropdown">
 				<button class="dropbtn">About Us</button>
@@ -51,7 +51,7 @@
 			<!-------- DESKTOP NAVBAR  ------->
 			
 			<div class="links-list">
-			<a class="link active" href="index.html" >Home</a>
+			<a class="link" href="index.html" >Home</a>
 			<a class="link" href="gallery.html" >Gallery</a>
 			<div class="dropdown">
 				<button class="dropbtn">About Us</button>
@@ -88,20 +88,37 @@
 		
 		<!---------------- HERO SECTION ----------------->
 		
-		<div class="landing-page">
-			<div class="section">
-				<div class="study area" id="study">
-					<div>
-					<h1>Windy Heights Primary</h1>
-					<h3>"Knowledge With Understanding"</h3>
-					<p>SINCE 1989</p>
-					</div>
-				</div>
+		<div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext" style="background-color: rgba(0,0,0,0);"></div>
+            <img src="images/123.jpg" style="width:100%;">
+            
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">
+				<h1>Enriching minds since 1989</h1>
+				<p>Come visit us or enroll at Windy Heights.</p>
+				<a href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox()>Enroll Here</a>
 			</div>
-			
-			
-		</div>
-		
+            <img src="images/books.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">
+				<h1>Decades of history and learning</h1>
+				<p>We have been around for long & numerous lives have been changed through our influence.</p>
+				<a href="about.html">More About Us</a>
+			</div>
+            <img src="images/Gallery/62.jpg" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
 		
 		<!---------------- NEWS SECTION ----------------->
 		
@@ -123,8 +140,8 @@
 							<p>To be a leading institution in providing learners with education, knowledge, skills and values to enable them to make significant and positive contribution to our society.</p>
 						</div>
 						<div class="reason">
-							<h2>7 School values</h2>
-							<ol>
+							<h2 class="vision">Our Values</h2>
+							<ul>
 								<li>Professionalism</li>
 								<li>Empathy</li>
 								<li>Integrity</li>
@@ -132,7 +149,7 @@
 								<li>Fairness</li>
 								<li>Inclusiveness</li>
 								<li>Diversity</li>
-							</ol>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -150,7 +167,7 @@
 		
 		<div class="footer" id="Contact">
 			<div class="newsletter">
-				<div class="text">
+				<div>
 					<a href="newsletters.html">Visit our newsletter.</a>
 				</div>
 			</div>
@@ -169,7 +186,6 @@
 					<li><i class="fa-solid fa-at" style="color: #F42626;"></i><a href="mailto:windyheightsprimary@gmail.com">windyheightsprimary@gmail.com</a></li>
 				</ul>
 				<div class="social-media">
-<!-- 					<a class="network" href="https://web.facebook.com/search/top?q=windy%20heights"><i class="fa-solid fa-blog"></i></a> -->
 					<a class="network" href="https://web.facebook.com/SchoolWindy" target="_blank"><i class="fa-brands fa-square-facebook"></i>Follow us on Facebook</a>
 				</div>
 				</div>
@@ -179,12 +195,60 @@
                 </div>
 				
 				</div>
+				<div class="copyright">
+					<p>Windy Heights Primary - All Rights Reserved</p>
+					<p>©Sphamandla Gumede - 2024</p>
+				</div>
 		</div>
 			
 	</div>
 
 <script src="script.js"></script>
-<script src="https://web3forms.com/client/script.js" async defer></script>
+<script >
+
+<!-- SLIDESHOW CODE INCLUDED HERE BECAUSE IT DOES NOT WORK ON THE JAVASCRIPT FILE ON PAGE LOAD. -->
+
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+// Auto Slide   if you need auto slide ,remove the commit "//"
+var slideIndex = 0;
+showSlides();
+function showSlides() {
+    var i;
+   var slides = document.getElementsByClassName("mySlides");
+   for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+   }
+   slideIndex++;
+   if (slideIndex > slides.length) { slideIndex = 1 }
+   slides[slideIndex - 1].style.display = "block";
+   setTimeout(showSlides, 8000); // Change image every 2 seconds
+}
+
+<!-- END OF SLIDESHOW CODE -->
+
+</script>
 
 </body>
 </html>

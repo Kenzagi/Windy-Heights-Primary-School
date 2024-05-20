@@ -1,4 +1,3 @@
-
 // DOWNLOADING APPLICATION FORM;
 const applyBtn = document.getElementById('apply');
 const popup = document.getElementById('popup');
@@ -16,9 +15,7 @@ function showBox(){
 }
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////
-
-// GALLERY CODE;
+////////////////////////         GALLERY PAGE INTERACTION CODE         //////////////////////////////////
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -57,7 +54,7 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////         SIDEBAR MENU CODE         //////////////////////////////////
 
 function closeSidebar(){
 	const sidebar= document.querySelector('.sidebar');
@@ -71,7 +68,7 @@ function showSidebar(){
 
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////         NEWSLETTER PAGE CODE         //////////////////////////////////
 
 function openCity(evt, period) {
   var i, x, tablinks;
@@ -86,3 +83,7 @@ function openCity(evt, period) {
   document.getElementById(period).style.display = "flex";
   evt.currentTarget.className += " active-tab";
 }
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
