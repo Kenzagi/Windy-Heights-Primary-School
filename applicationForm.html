@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="applicationForm.css">
+        <link rel="stylesheet" href="responsive-style.css">
+        <!-- <link rel="icon" href="logo.ico" type="image/x-icon"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <title>Windy Heights Primary</title>
+    </head>
+    <body>
+        <div class="container">
+             <!-------- MOBILE SCREEN NAVBAR  ------->
+            
+             <div class="links-list sidebar">
+                <a class="link" onclick=closeSidebar() ><i class="fa-solid fa-xmark"></i></a>
+                <a class="link" href="index.html" onclick=closeSidebar()>Home</a>
+                <a class="link" href="gallery.html" onclick=closeSidebar() >Gallery</a>
+                <div class="dropdown">
+                    <button class="dropbtn">About Us</button>
+                    <div class="dropdown-content">
+                        <a href="about.html"  onclick=closeSidebar()>History</a>
+                        <a href="about.html#Staff" onclick=closeSidebar()>Staff</a>
+                        <a href="about.html#Partners" onclick=closeSidebar()>Partners</a>
+                        <a href="newsletters.html" onclick=closeSidebar()>Newsletter</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Learner Portal</button>
+                    <div class="dropdown-content">
+                        <a href="calendar.html" onclick=closeSidebar()>School Calendar</a>
+                        <a href="#" onclick=closeSidebar()>Regulations & Conduct</a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Learner Portal</button>
+                    <div class="dropdown-content">
+                        <a href="calendar.html" onclick=closeSidebar()>School Calendar</a>
+                        <a href="#" onclick=closeSidebar()>Regulations & Conduct</a>
+                    </div>
+                </div>
+    
+                <a class="link" href="#Contact" onclick=closeSidebar()>Contact Us</a>
+                
+                <!-- <a class="link apply" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox()>Apply</a> -->
+                <div class="dropdown">
+                    <button class="dropbtn">Apply</button>
+                    <div class="dropdown-content">
+                <a class="link" href="applicationForm.html">Apply Online</a>
+                <a class="link" href="images/Content/learner-portal/Admission-form.pdf">Download Form</a>
+                <a class="link" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox() >Download Form</a>
+                    </div>
+                </div>
+                </div>
+            <!---------------- NAVIGATION BAR ----------------->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <div class="logo"></div>
+                    <span>Windy Heights Primary</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="about.html">History</a>
+                                <a class="dropdown-item" href="about.html#Staff">Staff</a>
+                                <a class="dropdown-item" href="about.html#Partners">Partners</a>
+                                <a class="dropdown-item" href="newsletters.html">Newsletter</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Learner Portal</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <a class="dropdown-item" href="calendar.html">School Calendar</a>
+                                <a class="dropdown-item" href="#">Regulations & Conduct</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#Contact">Contact Us</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Apply</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                                <a class="dropdown-item" href="applicationForm.html">Apply Online</a>
+                                <a class="dropdown-item" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download onclick="showBox()">Download Form</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <br><br><br><hr>
+
+    <div class="container mt-5">
+    
+        <div class="card">
+            <div class="card-header">
+                <h3>Admission Form</h3>
+            </div>
+            <div class="card-body">
+                <form id="admissionForm" method="post" action="apply.php" enctype="multipart/form-data">
+                    <div id="page1">
+                        <h5>Learner's Personal Information</h5>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="dob">Date of Birth</label>
+                                <input type="date" class="form-control" id="dob" name="dob">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="gender">Gender</label>
+                                <select class="form-control" id="gender" name="gender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="identificationNo">Identification No</label>
+                                <input type="text" class="form-control" id="identificationNo" name="identificationNo" placeholder="Enter ID number">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="race">Race</label>
+                                <input type="text" class="form-control" id="race" name="race" placeholder="Enter race">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="countryOfResidence">Country of Residence</label>
+                                <input type="text" class="form-control" id="countryOfResidence" name="countryOfResidence" placeholder="Enter country of residence">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="provinceOfResidence">Province of Residence (if SA)</label>
+                                <input type="text" class="form-control" id="provinceOfResidence" name="provinceOfResidence" placeholder="Enter province of residence">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="citizenship">Citizenship</label>
+                                <input type="text" class="form-control" id="citizenship" name="citizenship" placeholder="Enter citizenship">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="physicalAddress">Physical Address</label>
+                                <input type="text" class="form-control" id="physicalAddress" name="physicalAddress" placeholder="Enter physical address">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="code">Code</label>
+                                <input type="text" class="form-control" id="code" name="code" placeholder="Enter code">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="homeTelephone">Home Telephone</label>
+                                <input type="tel" class="form-control" id="homeTelephone" name="homeTelephone" placeholder="Enter home telephone">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="emergencyTelephone">Emergency Telephone</label>
+                                <input type="tel" class="form-control" id="emergencyTelephone" name="emergencyTelephone" placeholder="Enter emergency telephone">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="learnerCell">Learner Cell</label>
+                                <input type="tel" class="form-control" id="learnerCell" name="learnerCell" placeholder="Enter learner cell">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="learnerEmail">Learner Email Address</label>
+                                <input type="email" class="form-control" id="learnerEmail" name="learnerEmail" placeholder="Enter learner email">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="homeLanguage">Home Language</label>
+                                <input type="text" class="form-control" id="homeLanguage" name="homeLanguage" placeholder="Enter home language">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="preferredLanguage">Preferred Language of Instruction</label>
+                                <input type="text" class="form-control" id="preferredLanguage" name="preferredLanguage" placeholder="Enter preferred language">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="religion">Religion</label>
+                                <input type="text" class="form-control" id="religion" name="religion" placeholder="Enter religion">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Deceased Parent</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="deceasedMother" name="deceasedMother">
+                                    <label class="form-check-label" for="deceasedMother">Mother</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="deceasedFather" name="deceasedFather">
+                                    <label class="form-check-label" for="deceasedFather">Father</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="deceasedBoth" name="deceasedBoth">
+                                    <label class="form-check-label" for="deceasedBoth">Both</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deathCertificate">Death Certificate (if applicable)</label>
+                                    <input type="file" class="form-control-file" id="deathCertificate" name="deathCertificate">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="immunisationRecords">Copy of Immunisation Records</label>
+                                <input type="file" class="form-control-file" id="immunisationRecords" name="immunisationRecords">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="birthCertificate">Copy of Birth Certificate</label>
+                                <input type="file" class="form-control-file" id="birthCertificate" name="birthCertificate">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="progressReport">Progress Report from Previous School</label>
+                                <input type="file" class="form-control-file" id="progressReport" name="progressReport">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="transferLetter">Transfer Letter from Previous School</label>
+                                <input type="file" class="form-control-file" id="transferLetter" name="transferLetter">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="nextButton">Next</button>
+                    </div>
+    
+                    <div id="page2" style="display:none;">
+                        <h5>Previous School Information</h5>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="prevSchoolName">Name of Previous School</label>
+                                <input type="text" class="form-control" id="prevSchoolName" name="prevSchoolName" placeholder="Enter previous school name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="prevSchoolAddress">Previous School Address</label>
+                                <input type="text" class="form-control" id="prevSchoolAddress" name="prevSchoolAddress" placeholder="Enter previous school address">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="prevSchoolCode">Code</label>
+                                <input type="text" class="form-control" id="prevSchoolCode" name="prevSchoolCode" placeholder="Enter code">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="prevSchoolProvince">Province</label>
+                                <input type="text" class="form-control" id="prevSchoolProvince" name="prevSchoolProvince" placeholder="Enter province">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="prevSchoolCountry">Country</label>
+                                <input type="text" class="form-control" id="prevSchoolCountry" name="prevSchoolCountry" placeholder="Enter country">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="nextButton2">Next</button>
+                        <button type="button" class="btn btn-secondary" id="prevButton">Previous</button>
+                    </div>
+    
+                    <div id="page3" style="display:none;">
+                        <h5>Learner Medical Information</h5>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="medicalAidNumber">Medical Aid Number</label>
+                                <input type="text" class="form-control" id="medicalAidNumber" name="medicalAidNumber" placeholder="Enter medical aid number">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="medicalAidName">Medical Aid Name</label>
+                                <input type="text" class="form-control" id="medicalAidName" name="medicalAidName" placeholder="Enter medical aid name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="mainMember">Medical Aid Main Member</label>
+                                <input type="text" class="form-control" id="mainMember" name="mainMember" placeholder="Enter main member name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="doctorName">Doctor's Name</label>
+                                <input type="text" class="form-control" id="doctorName" name="doctorName" placeholder="Enter doctor's name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="doctorAddress">Doctor's Address</label>
+                                <input type="text" class="form-control" id="doctorAddress" name="doctorAddress" placeholder="Enter doctor's address">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="doctorPhone">Doctor's Telephone Number</label>
+                                <input type="tel" class="form-control" id="doctorPhone" name="doctorPhone" placeholder="Enter doctor's telephone number">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="medicalCondition">Medical Condition</label>
+                                <input type="text" class="form-control" id="medicalCondition" name="medicalCondition" placeholder="Enter medical condition">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="counselingNeeds">Special Problems Requiring Counseling</label>
+                                <input type="text" class="form-control" id="counselingNeeds" name="counselingNeeds" placeholder="Enter counseling needs">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="dexterity">Dexterity</label>
+                                <select class="form-control" id="dexterity" name="dexterity">
+                                    <option>Left-handed</option>
+                                    <option>Right-handed</option>
+                                    <option>Ambidextrous</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="socialGrant">Registered for Social Grant</label>
+                                <select class="form-control" id="socialGrant" name="socialGrant">
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="nextButton3">Next</button>
+                        <button type="button" class="btn btn-secondary" id="prevButton2">Previous</button>
+                    </div>
+    
+                    <div id="page4" style="display:none;">
+                        <h5>Sibling Information</h5>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="numberOfSiblings">Number of Other Children at This School</label>
+                                <input type="number" class="form-control" id="numberOfSiblings" name="numberOfSiblings" placeholder="Enter number of siblings">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="familyPosition">Position in the Family</label>
+                                <input type="text" class="form-control" id="familyPosition" name="familyPosition" placeholder="Enter position in the family (e.g., first)">
+                            </div>
+                        </div>
+                        <div id="siblingSection">
+                            <h6>Siblings</h6>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="siblingName">Full Name</label>
+                                    <input type="text" class="form-control" name="siblingName[]" placeholder="Enter sibling's full name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="siblingGrade">Grade</label>
+                                    <input type="text" class="form-control" name="siblingGrade[]" placeholder="Enter sibling's grade">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-secondary" id="addSibling">Add Sibling</button>
+                        <button type="button" class="btn btn-primary" id="nextButton4">Next</button>
+                        <button type="button" class="btn btn-secondary" id="prevButton3">Previous</button>
+                    </div>
+    
+                    <div id="page5" style="display:none;">
+                        <h5>Parent / Guardian Information</h5>
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label for="parentTitle">Title</label>
+                                <input type="text" class="form-control" id="parentTitle" name="parentTitle" placeholder="Enter title">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="parentInitials">Initials</label>
+                                <input type="text" class="form-control" id="parentInitials" name="parentInitials" placeholder="Enter initials">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="parentSurname">Surname</label>
+                                <input type="text" class="form-control" id="parentSurname" name="parentSurname" placeholder="Enter surname">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="parentFirstName">First Name</label>
+                                <input type="text" class="form-control" id="parentFirstName" name="parentFirstName" placeholder="Enter first name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="parentGender">Gender</label>
+                                <select class="form-control" id="parentGender" name="parentGender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="parentHomeLanguage">Home Language</label>
+                                <input type="text" class="form-control" id="parentHomeLanguage" name="parentHomeLanguage" placeholder="Enter home language">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="parentRace">Race</label>
+                                <input type="text" class="form-control" id="parentRace" name="parentRace" placeholder="Enter race">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="parentID">Identification No. OR Passport Number</label>
+                                <input type="text" class="form-control" id="parentID" name="parentID" placeholder="Enter ID or passport number">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="accountPayer">Account Payer</label>
+                                <select class="form-control" id="accountPayer" name="accountPayer">
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="parentAddress">Residential Street Address</label>
+                                <input type="text" class="form-control" id="parentAddress" name="parentAddress" placeholder="Enter residential street address">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="parentCity">City/Suburb</label>
+                                <input type="text" class="form-control" id="parentCity" name="parentCity" placeholder="Enter city/suburb">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="parentCode">Code</label>
+                                <input type="text" class="form-control" id="parentCode" name="parentCode" placeholder="Enter code">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="parentOccupation">Occupation</label>
+                                <input type="text" class="form-control" id="parentOccupation" name="parentOccupation" placeholder="Enter occupation">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="parentEmployer">Employer</label>
+                                <input type="text" class="form-control" id="parentEmployer" name="parentEmployer" placeholder="Enter employer">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="spouseSurname">Surname of Spouse</label>
+                                <input type="text" class="form-control" id="spouseSurname" name="spouseSurname" placeholder="Enter spouse's surname">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="spouseFirstName">First Name of Spouse</label>
+                                <input type="text" class="form-control" id="spouseFirstName" name="spouseFirstName" placeholder="Enter spouse's first name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="spouseOccupation">Occupation of Spouse</label>
+                                <input type="text" class="form-control" id="spouseOccupation" name="spouseOccupation" placeholder="Enter spouse's occupation">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="residesWithParent">Learner Resides with This Parent</label>
+                                <select class="form-control" id="residesWithParent" name="residesWithParent">
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="spouseID">Spouse ID No.</label>
+                                <input type="text" class="form-control" id="spouseID" name="spouseID" placeholder="Enter spouse's ID number">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="relationshipToLearner">Relationship to Learner</label>
+                                <input type="text" class="form-control" id="relationshipToLearner" name="relationshipToLearner" placeholder="Enter relationship to learner">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="maritalStatus">Marital Status of Parent</label>
+                                <input type="text" class="form-control" id="maritalStatus" name="maritalStatus" placeholder="Enter marital status">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="nextButton5">Next</button>
+                        <button type="button" class="btn btn-secondary" id="prevButton4">Previous</button>
+                    </div>
+    
+                    <div id="page6" style="display:none;">
+                        <h5>Correspondence Details</h5>
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label for="correspondenceTitle">Title</label>
+                                <input type="text" class="form-control" id="correspondenceTitle" name="correspondenceTitle" placeholder="Enter title">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label for="correspondenceSurname">Surname</label>
+                                <input type="text" class="form-control" id="correspondenceSurname" name="correspondenceSurname" placeholder="Enter surname">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label for="correspondenceAddress">Postal Address</label>
+                                <input type="text" class="form-control" id="correspondenceAddress" name="correspondenceAddress" placeholder="Enter postal address">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="correspondenceCity">City/Suburb</label>
+                                <input type="text" class="form-control" id="correspondenceCity" name="correspondenceCity" placeholder="Enter city/suburb">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="correspondenceCode">Code</label>
+                                <input type="text" class="form-control" id="correspondenceCode" name="correspondenceCode" placeholder="Enter code">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="nextButton6">Next</button>
+                        <button type="button" class="btn btn-secondary" id="prevButton5">Previous</button>
+                    </div>
+    
+                    <div id="page7" style="display:none;">
+                        <h5>Other Contact Details</h5>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="homePhone">Home Telephone</label>
+                                <input type="tel" class="form-control" id="homePhone" name="homePhone" placeholder="Enter home telephone">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="workPhone">Work Telephone</label>
+                                <input type="tel" class="form-control" id="workPhone" name="workPhone" placeholder="Enter work telephone">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="faxNumber">Fax Number</label>
+                                <input type="tel" class="form-control" id="faxNumber" name="faxNumber" placeholder="Enter fax number">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="cellNumber">Cell Number</label>
+                                <input type="tel" class="form-control" id="cellNumber" name="cellNumber" placeholder="Enter cell number">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="spouseWorkPhone">Spouse Work Telephone</label>
+                                <input type="tel" class="form-control" id="spouseWorkPhone" name="spouseWorkPhone" placeholder="Enter spouse work telephone">
+                            </div>
+                            <div class="form-group col-md4">
+                                <label for="spouseCell">Spouse Cell Number</label>
+                                <input type="tel" class="form-control" id="spouseCell" name="spouseCell" placeholder="Enter spouse cell number">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="emailAddress">Email Address</label>
+                                <input type="email" class="form-control" id="emailAddress" name="emailAddress" placeholder="Enter email address">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="spouseEmail">Spouse Email Address</label>
+                                <input type="email" class="form-control" id="spouseEmail" name="spouseEmail" placeholder="Enter spouse email address">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-secondary" id="prevButton6">Previous</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showSidebar() {
+            document.querySelector(".sidebar").style.display = "block";
+        }
+
+        function closeSidebar() {
+            document.querySelector(".sidebar").style.display = "none";
+        }
+    </script>
+    <script>
+        
+        document.getElementById('nextButton').addEventListener('click', function() {
+            document.getElementById('page1').style.display = 'none';
+            document.getElementById('page2').style.display = 'block';
+        });
+    
+        document.getElementById('nextButton2').addEventListener('click', function() {
+            document.getElementById('page2').style.display = 'none';
+            document.getElementById('page3').style.display = 'block';
+        });
+    
+        document.getElementById('nextButton3').addEventListener('click', function() {
+            document.getElementById('page3').style.display = 'none';
+            document.getElementById('page4').style.display = 'block';
+        });
+    
+        document.getElementById('nextButton4').addEventListener('click', function() {
+            document.getElementById('page4').style.display = 'none';
+            document.getElementById('page5').style.display = 'block';
+        });
+    
+        document.getElementById('nextButton5').addEventListener('click', function() {
+            document.getElementById('page5').style.display = 'none';
+            document.getElementById('page6').style.display = 'block';
+        });
+    
+        document.getElementById('nextButton6').addEventListener('click', function() {
+            document.getElementById('page6').style.display = 'none';
+            document.getElementById('page7').style.display = 'block';
+        });
+    
+        document.getElementById('prevButton').addEventListener('click', function() {
+            document.getElementById('page2').style.display = 'none';
+            document.getElementById('page1').style.display = 'block';
+        });
+    
+        document.getElementById('prevButton2').addEventListener('click', function() {
+            document.getElementById('page3').style.display = 'none';
+            document.getElementById('page2').style.display = 'block';
+        });
+    
+        document.getElementById('prevButton3').addEventListener('click', function() {
+            document.getElementById('page4').style.display = 'none';
+            document.getElementById('page3').style.display = 'block';
+        });
+    
+        document.getElementById('prevButton4').addEventListener('click', function() {
+            document.getElementById('page5').style.display = 'none';
+            document.getElementById('page4').style.display = 'block';
+        });
+    
+        document.getElementById('prevButton5').addEventListener('click', function() {
+            document.getElementById('page6').style.display = 'none';
+            document.getElementById('page5').style.display = 'block';
+        });
+    
+        document.getElementById('prevButton6').addEventListener('click', function() {
+            document.getElementById('page7').style.display = 'none';
+            document.getElementById('page6').style.display = 'block';
+        });
+    
+        document.getElementById('addSibling').addEventListener('click', function() {
+            var siblingSection = document.getElementById('siblingSection');
+            var siblingRow = document.createElement('div');
+            siblingRow.className = 'form-row';
+            siblingRow.innerHTML = `
+                <div class="form-group col-md-6">
+                    <label for="siblingName">Full Name</label>
+                    <input type="text" class="form-control" name="siblingName[]" placeholder="Enter sibling's full name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="siblingGrade">Grade</label>
+                    <input type="text" class="form-control" name="siblingGrade[]" placeholder="Enter sibling's grade">
+                </div>
+            `;
+            siblingSection.appendChild(siblingRow);
+        });
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

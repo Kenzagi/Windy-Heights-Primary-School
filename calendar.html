@@ -16,66 +16,99 @@
 	<div class="container">
 	
 		<!---------------- NAVIGATION BAR ----------------->
-		<nav id="navbar">
+        <nav id="navbar">
 			<div class="home">
-				<div class="logo"></div>
+				<a href="index.html">
+					<div class="logo"></div>
+				</a>
 				<a href="index.html">Windy Heights Primary</a>
 			</div>
-			
-			<!-------- MOBILE SCREEN NAVBAR  ------->
-			
-			<div class="links-list sidebar">
-			<a class="link" onclick=closeSidebar() ><i class="fa-solid fa-xmark"></i></a>
-			<a class="link " href="index.html" onclick=closeSidebar()>Home</a>
-			<a class="link" href="gallery.html" onclick=closeSidebar() >Gallery</a>
+            
+            <!-------- MOBILE SCREEN NAVBAR  ------->
+            
+            <div class="links-list sidebar">
+            <a class="link" onclick=closeSidebar() ><i class="fa-solid fa-xmark"></i></a>
+            <a class="link" href="index.html" onclick=closeSidebar()>Home</a>
+            <a class="link" href="gallery.html" onclick=closeSidebar() >Gallery</a>
+            <div class="dropdown">
+                <button class="dropbtn">About Us</button>
+                <div class="dropdown-content">
+                    <a href="about.html"  onclick=closeSidebar()>History</a>
+                    <a href="about.html#Staff" onclick=closeSidebar()>Staff</a>
+                    <a href="about.html#Partners" onclick=closeSidebar()>Partners</a>
+                    <a href="newsletters.html" onclick=closeSidebar()>Newsletter</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Learner Portal</button>
+                <div class="dropdown-content">
+                    <a href="calendar.html" onclick=closeSidebar()>School Calendar</a>
+                    <a href="#" onclick=closeSidebar()>Regulations & Conduct</a>
+                </div>
+            </div>
+
 			<div class="dropdown">
-				<button class="dropbtn">About Us</button>
-				<div class="dropdown-content">
-					<a href="about.html"  onclick=closeSidebar()>History</a>
-					<a href="about.html#Staff" onclick=closeSidebar()>Staff</a>
-					<a href="about.html#Partners" onclick=closeSidebar()>Partners</a>
-					<a href="newsletters.html" onclick=closeSidebar()>Newsletter</a>
-				</div>
-			</div>
+                <button class="dropbtn">Learner Portal</button>
+                <div class="dropdown-content">
+                    <a href="calendar.html" onclick=closeSidebar()>School Calendar</a>
+                    <a href="#" onclick=closeSidebar()>Regulations & Conduct</a>
+                </div>
+            </div>
+
+            <a class="link" href="#Contact" onclick=closeSidebar()>Contact Us</a>
+			
+            <!-- <a class="link apply" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox()>Apply</a> -->
 			<div class="dropdown">
-				<button class="dropbtn">Learner Portal</button>
-				<div class="dropdown-content">
-					<a href="calendar.html" onclick=closeSidebar()>School Calendar</a>
-					<a href="#" onclick=closeSidebar()>Regulations & Conduct</a>
-				</div>
-			</div>
-			<a class="link" href="#Contact" onclick=closeSidebar()>Contact Us</a>
-			<a class="link apply" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox() >Apply</a>
-			
-			</div>
-			
-			<!-------- DESKTOP NAVBAR  ------->
-			
-			<div class="links-list">
-			<a class="link " href="index.html" >Home</a>
-			<a class="link" href="gallery.html" >Gallery</a>
-			<div class="dropdown">
-				<button class="dropbtn">About Us</button>
-				<div class="dropdown-content">
-					<a href="about.html">History</a>
-					<a href="about.html#Staff">Staff</a>
-					<a href="about.html#Partners">Partners</a>
-					<a href="newsletters.html">Newsletter</a>
-				</div>
-			</div>
-			<div class="dropdown">
-				<button class="dropbtn">Learner Portal</button>
-				<div class="dropdown-content">
-					<a href="calendar.html">School Calendar</a>
-					<a href="#">Regulations & Conduct</a>
-				</div>
-			</div>
-			<a class="link" href="#Contact">Contact Us</a>
-			<a class="link apply" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox() >Apply</a>
-			<a class="link navBtn" onclick=showSidebar() ><i class="fa-solid fa-bars"></i></a>
-			</div>
-			
-		</nav>
+                <button class="dropbtn">Apply</button>
+                <div class="dropdown-content">
+            <a class="link" href="applicationForm.html">Apply Online</a>
+			<a class="link" href="images/Content/learner-portal/Admission-form.pdf">Download Form</a>
+            <a class="link" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox() >Download Form</a>
+                </div>
+            </div>
+            </div>
+            
+            <!-------- DESKTOP NAVBAR  ------->
+            
+            <div class="links-list">
+            <a class="link" href="index.html" >Home</a>
+            <a class="link" href="gallery.html" >Gallery</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">About Us</button>
+                <div class="dropdown-content">
+                    <a href="about.html">History</a>
+                    <a href="about.html#Staff">Staff</a>
+                    <a href="about.html#Partners">Partners</a>
+                    <a href="newsletters.html">Newsletter</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Learner Portal</button>
+                <div class="dropdown-content">
+                    <a href="calendar.html">School Calendar</a>
+                    <a href="#">Regulations & Conduct</a>
+                </div>
+            </div>
+
+            <a class="link" href="#Contact">Contact Us</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Apply</button>
+                <div class="dropdown-content">
+            <a class="link" href="applicationForm.html">Apply Online</a>
+			<a class="link" href="images/Content/learner-portal/Admission-form.pdf">Download Form</a>
+            <a class="link" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox() >Download Form</a>
+                </div>
+            </div>
+            <!-- <a class="link" href="applicationForm.html">Apply</a> -->
+            <!-- <a class="link apply" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox() >Apply</a> -->
+            <a class="link navBtn" onclick=showSidebar() ><i class="fa-solid fa-bars"></i></a>
+            
+            </div>
+            
+        </nav>
 		
 		<!-------- DOWNLOAD BOX ------->
 		

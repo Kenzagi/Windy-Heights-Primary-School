@@ -17,43 +17,46 @@ function showBox(){
 
 ////////////////////////         GALLERY PAGE INTERACTION CODE         //////////////////////////////////
 
-// Get the modal
 var modal = document.getElementById("myModal");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-
 var modalImg = document.getElementById("image1");
 var captionText = document.getElementById("caption");
-
-
 var imageThumbs = document.getElementById("thumb-wrapper");
-// var currentImage = document.getElementById("myImg");
-for (var i = 1; i <= 127; i++) {
-	let thumb = document.createElement('img');
-	thumb.src = "images/Gallery/" + i + ".jpg";
-	
-	thumb.alt = "Image " + i;
-	thumb.id = 'myImg';
-	thumb.classList.add("thumb");
-	imageThumbs.appendChild(thumb);
-	console.log(thumb);
-	
-	thumb.addEventListener(
-  "click", function() {
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  // captionText.innerHTML = this.alt;
-  });
+
+// Function to check if an image exists
+function imageExists(image_url) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', image_url, false);
+    http.send();
+    return http.status != 404;
 }
 
-// Get the <span> element that closes the modal
+var i = 1;
+while (true) {
+    var imgSrc = "images/Gallery/" + i + ".jpg";
+    if (!imageExists(imgSrc)) {
+        break;
+    }
+
+    let thumb = document.createElement('img');
+    thumb.src = imgSrc;
+    thumb.alt = "Image " + i;
+    thumb.classList.add("thumb");
+    imageThumbs.appendChild(thumb);
+
+    thumb.addEventListener("click", function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    });
+
+    i++;
+}
+
+// Close the modal when the user clicks on <span> (x)
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
+span.onclick = function() {
+    modal.style.display = "none";
 }
-
 ////////////////////////         SIDEBAR MENU CODE         //////////////////////////////////
 
 function closeSidebar(){
