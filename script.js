@@ -36,7 +36,7 @@ while (true) {
     if (!imageExists(imgSrc)) {
         break;
     }
-
+	
     let thumb = document.createElement('img');
     thumb.src = imgSrc;
     thumb.alt = "Image " + i;
