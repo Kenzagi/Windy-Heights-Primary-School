@@ -1,0 +1,190 @@
+
+@media only screen and (max-width: 800px) {
+
+nav{
+	
+	padding: 12px 10px;
+	
+}
+
+nav	.home a{
+	font-size: 22px;
+	visibility: visible;
+}
+
+nav .links-list {
+	font-size: 16px;
+	display: flex;
+}
+
+nav .sidebar{
+	background-color: #FFFAFF;
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: auto;
+	width: 100%;
+	display: none;
+	flex-direction: column;
+	align-items: start;
+	justify-content: flex-start;
+	padding: 20px;
+	font-size: 16px;
+	z-index: 999;
+}
+	
+.sidebar .apply {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+nav .sidebar button{
+	font-size: 16px;
+}
+
+.sidebar .dropbtn{
+	display: flex;
+}
+	
+nav .sidebar .link{
+	display: flex;
+}
+
+
+nav .navBtn{
+	display: flex;
+}
+
+.links-list button{
+	font-size: 14px;
+}
+
+.links-list .link, .dropbtn{
+	display: none;
+}
+
+.links-list .link:last-child{
+	display: flex;
+	/* font-size: 16px; */
+}
+
+.logo{
+	width: 60px;
+	height: 40px;
+	background-image: url(images/logo.jpg);
+	background-size: cover;
+	background-position: center;
+	object-fit: cover;
+}
+
+.landing-page{
+	width: 100%;
+	height: 75vh;
+}
+
+.landing-page .area{
+	}
+	
+.area div{ background: rgba(5, 6, 9, .4); }
+
+.area h1{
+	font-weight: 600;
+	font-size: 45px;
+}
+
+.area h3{
+	padding-top: 20px;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+/************ MISSION STATEMENT AREA STYLING ***********/
+
+.news-area {
+	padding: 20px;
+}
+
+.content .content-area{
+		padding: 20px 0;
+	}
+	
+.article{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.reason ul {
+	align-items: end;
+	justify-content: center;
+}
+
+.reason ul li{
+	/* box-shadow: 0 4px 30px rgba(0, 0 , 0, 0.2); */
+	/* backdrop-filter: blur(12.6px); */
+	/* -webkit-backdrop-filter: blur(12.6px); */
+	background: #F42626;
+	color: #FFFAFF;
+}
+
+/************ FOOTER STYLING ***********/
+
+
+.footer-content{
+	width: 100%;
+	height: auto;
+	gap: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 30px;
+}
+
+.details {
+	width: 100%;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+iframe{
+	width: 400px;
+	height: 300px;
+}
+
+.footer ul {
+	width: 100%;
+	align-items: center;
+	
+}
+
+.social-media{
+	width: 100%;
+	justify-content: center;
+}
+
+/***********  COPYRIGHT  ************/
+
+.copyright{
+	background: #151414;
+	width: 100%;
+	gap: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.copyright p{
+	color: #FFFAFF;
+	font-size: 12px;
+}
+
+}
+
+/***********************/
