@@ -54,9 +54,9 @@
 }
 
 /* Specific adjustment for the last nav-item (Apply) */
-.navbar-nav .nav-item:last-child {
-    margin-right: 40px; /* Moves it left by increasing the margin */
-}
+/* .navbar-nav .nav-item:last-child {
+    margin-right: 40px; 
+} */
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
