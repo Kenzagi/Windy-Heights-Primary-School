@@ -1,0 +1,49 @@
+/* footer.css */
+.footer {
+    background-color: #333; /* Dark grey background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 10px 0; /* Reduced padding for a smaller footer height */
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden; /* Ensures the text stays within the footer boundaries */
+    white-space: nowrap; /* Prevents wrapping of the text */
+}
+
+/* Styling for copyright text */
+.footer p {
+    margin: 0; /* Remove default margin */
+    display: inline-block; /* Ensure text is treated as a block within the inline context */
+    animation: scroll-text 15s linear infinite; /* Applies scrolling animation */
+}
+
+/* Keyframes for scrolling text */
+@keyframes scroll-text {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left */
+    }
+}
+
+/* Optional: You can adjust the font size and spacing */
+.footer p:first-child {
+    font-size: 1em; /* Adjust font size */
+    margin-bottom: 0; /* Remove margin */
+}
+
+.footer p:last-child {
+    font-size: 0.9em; /* Adjust font size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        padding: 10px 0; /* Ensure footer height is appropriate for mobile */
+    }
+
+    .footer p {
+        font-size: 0.8em; /* Adjust font size for mobile */
+    }
+}

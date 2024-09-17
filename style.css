@@ -625,23 +625,25 @@ body {
         color: #FFFAFF;
     }
 }
-.footer {
-    background-color: #0d0c0c;
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('images/455228574_1052033356923249_6530533738537579875_n.jpg') center center/cover no-repeat;
     color: #fff;
     padding: 20px 0;
+    background-attachment: fixed; /* Optional: for parallax effect */
 }
 
-.footer .footer-content {
+.contact-section .section-content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.footer .details {
+.contact-section .details {
     flex: 1;
 }
 
-.footer-logo {
+.section-logo {
     width: 80px;
 }
 
@@ -677,7 +679,6 @@ body {
     text-decoration: underline;
 }
 
-/* General social media styles */
 .social-media {
     display: flex;
     justify-content: center;
@@ -688,43 +689,39 @@ body {
 .social-media a {
     display: flex;
     align-items: center;
-    background-color: #F42626; /* Background color for the button */
-    color: #fff; /* Text color */
-    padding: 10px 15px; /* Padding for the button */
-    border-radius: 4px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    font-size: 14px; /* Font size */
-    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+    background-color: #F42626;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .social-media i {
-    margin-right: 12px; /* Adjust space between icon and text */
+    margin-right: 12px;
 }
 
-/* Hover effects */
 .social-media a:hover {
-    background-color: #e02d2d; /* Darker shade on hover */
-    transform: scale(1.05); /* Slightly enlarge button on hover */
+    background-color: #e02d2d;
+    transform: scale(1.05);
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
     .social-media {
-        flex-direction: column; /* Stack items vertically on smaller screens */
+        flex-direction: column;
     }
     
-
     .social-media a {
-        font-size: 16px; /* Increase font size for better readability on mobile */
-        padding: 12px 20px; /* Increase padding for easier clicking */
-        margin-bottom: 10px; /* Space between buttons */
+        font-size: 16px;
+        padding: 12px 20px;
+        margin-bottom: 10px;
     }
 
     .social-media i {
-        margin-right: 12px; /* Adjust space between icon and text for mobile */
+        margin-right: 12px;
     }
 }
-
 
 @media (max-width: 768px) {
     .contact-info {
@@ -745,27 +742,24 @@ body {
     .contact-info a {
         font-size: 0.9em;
     }
-
 }
 
-/* General styles for the map container */
+/* Map Styles */
 .map-container {
     width: 100%;
-    max-width: 800px; /* You can adjust this value as needed */
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px; /* Add padding for mobile responsiveness */
+    padding: 0 20px;
 }
 
-/* Make iframe responsive */
 .map {
     width: 100%;
-    height: 450px; /* Adjust height as needed */
+    height: 450px;
 }
 
-/* Responsive design for mobile devices */
 @media (max-width: 768px) {
     .map {
-        height: 300px; /* Adjust height for smaller screens */
+        height: 300px;
     }
 }
 
