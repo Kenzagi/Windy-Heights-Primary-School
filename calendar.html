@@ -4,112 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="responsive-style.css">
     <link rel="stylesheet" href="calendar.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 	<!-- <link rel="icon" href="logo.ico" type="image/x-icon"> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<title>Windy Heights</title>
 </head>
 <body>
-
-	<div class="container">
-	
-		<!---------------- NAVIGATION BAR ----------------->
-        <nav id="navbar">
-			<div class="home">
-				<a href="index.html">
-					<div class="logo"></div>
-				</a>
-				<a href="index.html">Windy Heights Primary</a>
-			</div>
-            
-            <!-------- MOBILE SCREEN NAVBAR  ------->
-            
-            <div class="links-list sidebar">
-            <a class="link" onclick=closeSidebar() ><i class="fa-solid fa-xmark"></i></a>
-            <a class="link" href="index.html" onclick=closeSidebar()>Home</a>
-            <a class="link" href="gallery.html" onclick=closeSidebar() >Gallery</a>
-            <div class="dropdown">
-                <button class="dropbtn">About Us</button>
-                <div class="dropdown-content">
-                    <a href="about.html"  onclick=closeSidebar()>History</a>
-                    <a href="about.html#Staff" onclick=closeSidebar()>Staff</a>
-                    <a href="about.html#Partners" onclick=closeSidebar()>Partners</a>
-                    <a href="newsletters.html" onclick=closeSidebar()>Newsletter</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Learner Portal</button>
-                <div class="dropdown-content">
-                    <a href="calendar.html" onclick=closeSidebar()>School Calendar</a>
-                    <a href="#" onclick=closeSidebar()>Regulations & Conduct</a>
-                </div>
-            </div>
-
-			<div class="dropdown">
-                <button class="dropbtn">Learner Portal</button>
-                <div class="dropdown-content">
-                    <a href="calendar.html" onclick=closeSidebar()>School Calendar</a>
-                    <a href="#" onclick=closeSidebar()>Regulations & Conduct</a>
-                </div>
-            </div>
-
-            <a class="link" href="#Contact" onclick=closeSidebar()>Contact Us</a>
-			
-            <!-- <a class="link apply" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox()>Apply</a> -->
-			<div class="dropdown">
-                <button class="dropbtn">Apply</button>
-                <div class="dropdown-content">
-            <a class="link" href="applicationForm.html">Apply Online</a>
-			<a class="link" href="images/Content/learner-portal/Admission-form.pdf">Download Form</a>
-            <a class="link" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox() >Download Form</a>
-                </div>
-            </div>
-            </div>
-            
-            <!-------- DESKTOP NAVBAR  ------->
-            
-            <div class="links-list">
-            <a class="link" href="index.html" >Home</a>
-            <a class="link" href="gallery.html" >Gallery</a>
-
-            <div class="dropdown">
-                <button class="dropbtn">About Us</button>
-                <div class="dropdown-content">
-                    <a href="about.html">History</a>
-                    <a href="about.html#Staff">Staff</a>
-                    <a href="about.html#Partners">Partners</a>
-                    <a href="newsletters.html">Newsletter</a>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <button class="dropbtn">Learner Portal</button>
-                <div class="dropdown-content">
-                    <a href="calendar.html">School Calendar</a>
-                    <a href="#">Regulations & Conduct</a>
-                </div>
-            </div>
-
-            <a class="link" href="#Contact">Contact Us</a>
-
-            <div class="dropdown">
-                <button class="dropbtn">Apply</button>
-                <div class="dropdown-content">
-            <a class="link" href="applicationForm.html">Apply Online</a>
-			<a class="link" href="images/Content/learner-portal/Admission-form.pdf">Download Form</a>
-            <a class="link" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox() >Download Form</a>
-                </div>
-            </div>
-            <!-- <a class="link" href="applicationForm.html">Apply</a> -->
-            <!-- <a class="link apply" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox() >Apply</a> -->
-            <a class="link navBtn" onclick=showSidebar() ><i class="fa-solid fa-bars"></i></a>
-            
-            </div>
-            
-        </nav>
-		
+  <header>
+    <div id="navbar-container"></div>
+</header>
 		<!-------- DOWNLOAD BOX ------->
 		
 		<div class="application" id="popup">
@@ -121,124 +27,105 @@
 		
 		<!-------------- GALLERY SECTION ----------------->
 		
-		<div class="calendar">
-			<h1>2024 Year Plan</h1>
-
-<table id="calendar-table">
-  <tr>
-    <th id="holidays">Annual Holidays</th>
-    <th>School Terms</th>
-    <th>Events</th>
-  </tr>
-  <tr>
-    <td><span>01 January</span> - New Years Day</td>
-    <td>17 Jan <span>-</span> 20 March 2024</td>
-    <td><span>14 June</span> - Youth Day Celebration</td>
-  </tr>
-  <tr>
-    <td><span>21 March</span> - Human Rights Day</td>
-    <td>3 Apr <span>-</span> 14 Jun 2024</td>
-    <td><span>27 July</span> - Fun Walk</td>
-  </tr>
-  <tr>
-    <td><span>Friday before Easter Sunday</span> - Good Day</td>
-    <td>9 Jul <span>-</span> 20 Sept 2024</td>
-    <td><span>-</span></td>
-  </tr>
-<tr>
-    <td><span>Monday after Easter Sunday</span> - Family Day</td>
-    <td>1 Oct <span>-</span> 13 Dec 2024</td>
-    <td><span>-</span></td>
-  </tr>
-  <tr>
-    <td><span>27 April</span> - Freedom Day</td>
-    <td><span>-</span></td>
-    <td><span>-</span></td>
-  </tr>
-  <tr>
-    <td><span>1 May</span> - Worker's Day</td>
-    <td>-</td>
-    <td><span>-</span></td>
-  </tr>
-  <tr>
-    <td><span>16 June</span> - Youth Day</td>
-    <td>-</td>
-    <td><span>-</span></td>
-  </tr>
-  <tr>
-    <td><span>9 August</span> - National Women's Day</td>
-    <td>-</td>
-    <td><span>-</span></td>
-  </tr>
-  <tr>
-    <td><span>24 September</span> - Heritage Day</td>
-    <td>-</td>
-    <td><span>-</span></td>
-  </tr>
-  <tr>
-    <td><span>16 December</span> - Day Of Reconciliation</td>
-    <td>-</td>
-    <td><span>-</span></td>
-  </tr>
-  <tr>
-    <td><span>25 December</span> - Christmas Day</td>
-    <td>-</td>
-    <td><span>-</span></td>
-  </tr>
-  <tr>
-    <td><span>26 December</span> - Day of Goodwill</td>
-    <td>-</td>
-    <td><span>-</span></td>
-  </tr>
-	
-</table>
-		
-		<div class="information">
-			<a class="link apply" href="images/Content/learner-portal/School-calendar.pdf" target="_blank" download id="apply" onclick=showBox() >Download Calendar</a>
-		</div>
-			<h3>* School & Work days can be affected by multiple external and/or internal factors.</h3>
-	</div>
-		
+    <div class="calendar">
+      <h1 class="calendar-heading">2024 Year Plan</h1>
+      <div class="calendar-content">
+          <table id="calendar-table">
+              <thead>
+                  <tr>
+                      <th class="header-title">Annual Holidays</th>
+                      <th class="header-title">School Terms</th>
+                      <th class="header-title">Events</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><span class="highlight">01 January</span> - New Year's Day</td>
+                      <td>17 Jan <span> - </span> 20 March 2024</td>
+                      <td><span class="highlight">14 June</span> - Youth Day Celebration</td>
+                  </tr>
+                  <tr>
+                      <td><span class="highlight">21 March</span> - Human Rights Day</td>
+                      <td>3 Apr <span> - </span> 14 Jun 2024</td>
+                      <td><span class="highlight">27 July</span> - Fun Walk</td>
+                  </tr>
+                  <tr>
+                      <td><span class="highlight">Friday before Easter Sunday</span> - Good Friday</td>
+                      <td>9 Jul <span> - </span> 20 Sept 2024</td>
+                      <td><span class="highlight">15 August</span> - Back to School Event</td>
+                  </tr>
+                  <tr>
+                      <td><span class="highlight">Monday after Easter Sunday</span> - Family Day</td>
+                      <td>1 Oct <span> - </span> 13 Dec 2024</td>
+                      <td><span class="highlight">30 November</span> - School Fair</td>
+                  </tr>
+                  <!-- Additional rows as needed -->
+              </tbody>
+          </table>
+          <div class="information">
+              <a class="link apply" href="images/Content/learner-portal/School-calendar.pdf" target="_blank" download id="apply" onclick="showBox()">Download Calendar</a>
+          </div>
+          <h3 class="disclaimer">* School & Work days can be affected by multiple external and/or internal factors.</h3>
+      </div>
+  </div>
+  
 		<!-------------- FOOTER SECTION ----------------->
 		
-		<div class="footer" id="Contact">
-			<div class="newsletter">
-				<div>
-					<a href="newsletters.html">Visit our newsletter.</a>
-				</div>
-			</div>
 			
-			<div class="footer-content">
-			<div class="details">
-				<img src="images/logo.jpg" alt="School Logo/Badge" style="width: 80px;"/>
-				<h2>Get in touch!</h2>
-				<p>for enquiries and other information, contact us.</p>
-				<div class="contact-info">
-				<ul>
-					<li><i class="fa-solid fa-phone" style="color: #F42626;"></i><a href="tel:031 902 2870">031 902 287</a></li>
-					<li><i class="fa-solid fa-at" style="color: #F42626;"></i><a href="mailto:windyheightsprimary@gmail.com">windyheightsprimary@gmail.com</a></li>
-					<li><i class="fa-solid fa-location-crosshairs" style="color: #F42626;"></i><a href="#">132 Postum Road, Umlazi, South Africa</a></li>
-					<li><i class="fa-solid fa-envelope" style="color: #F42626;"></i><a href="#">P.O Box: 23010, Isipingo, 4110</a></li>
-				</ul>
-				<div class="social-media">
-					<a class="network" href="https://web.facebook.com/SchoolWindy" target="_blank"><i class="fa-brands fa-square-facebook"></i>Follow us on Facebook</a>
-				</div>
-				</div>
-			</div>
-				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.4128671494295!2d30.89700497577883!3d-29.996299229045903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7ad2a76db185d%3A0x9452a4546bf435f6!2sWindy%20Heights%20Primary%20School!5e0!3m2!1sen!2sza!4v1712866745166!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-				
-			</div>
-			<div class="copyright">
-				<p>Windy Heights Primary - All Rights Reserved</p>
-				<p>©Sphamandla Gumede - 2024</p>
-			</div>
-		</div>
-			
-	</div>
+		<!-- Footer Section -->
+<footer class="footer">
+  <div class="container">
+      <div class="newsletter">
+          <a href="newsletters.html">Visit our newsletter.</a>
+      </div>
+      <div class="footer-content">
+          <div class="details">
+              <img src="images/Logo Windy Heights Primary school (1).ico" alt="School Logo" class="footer-logo">
+              <h3>Get in touch!</h3>
+              <p>For enquiries and other information, contact us.</p>
+              <div class="contact-info">
+                  <ul>
+                      <li><i class="fa-solid fa-phone" style="color: #F42626;"></i><a href="tel:+27319022877">+27 31 902 2877</a></li>
+                      <li><i class="fa-solid fa-at" style="color: #F42626;"></i><a href="mailto:windyheightsprimary@gmail.com">windyheightsprimary@gmail.com</a></li>
+                      <li><i class="fa-solid fa-location-crosshairs" style="color: #F42626;"></i><a href="https://www.google.com/maps/search/?api=1&query=132+Postum+Road,+Umlazi,+South+Africa" target="_blank">132 Postum Road, Umlazi, South Africa</a></li>
+                      <li><i class="fa-solid fa-envelope" style="color: #F42626;"></i><a href="#">P.O Box: 23010, Isipingo, 4110</a></li>
+                  </ul>
+                  <div class="social-media">
+                      <a class="network" href="https://web.facebook.com/SchoolWindy" target="_blank"><i class="fa-brands fa-square-facebook"></i>Follow us on Facebook</a>
+                  </div>
+              </div>
+              
+          </div>
+          <div class="map-container">
+              <iframe 
+                  class="map" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.4128671494295!2d30.89700497577883!3d-29.996299229045903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7ad2a76db185d%3A0x9452a4546bf435f6!2sWindy%20Heights%20Primary%20School!5e0!3m2!1sen!2sza!4v1712866745166!5m2!1sen!2sza" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+          </div>
+          
+      </div>
+      <div class="copyright">
+          <p>Windy Heights Primary - All Rights Reserved</p>
+          <p>©Sphamandla Gumede - 2024</p>
+      </div>
+  </div>
+</footer>
+
 
 <script src="script.js"></script>
+<script src="navbar.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- Popper.js (Bootstrap dropdowns depend on this for positioning) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>

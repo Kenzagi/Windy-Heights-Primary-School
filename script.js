@@ -22,6 +22,28 @@ var modalImg = document.getElementById("image1");
 var captionText = document.getElementById("caption");
 var imageThumbs = document.getElementById("thumb-wrapper");
 
+var zoomInButton = document.getElementById("zoom-in");
+    var zoomOutButton = document.getElementById("zoom-out");
+
+    var scale = 1; // Initial scale
+
+    function zoomIn() {
+        scale += 0.1; // Increase scale
+        modalImg.style.transform = `scale(${scale})`;
+    }
+
+    function zoomOut() {
+        scale = Math.max(1, scale - 0.1); // Decrease scale, ensuring it doesn't go below 1
+        modalImg.style.transform = `scale(${scale})`;
+    }
+
+    // Attach zoom functions to buttons
+    if (zoomInButton) {
+        zoomInButton.addEventListener('click', zoomIn);
+    }
+    if (zoomOutButton) {
+        zoomOutButton.addEventListener('click', zoomOut);
+    }
 // Function to check if an image exists
 function imageExists(image_url) {
     var http = new XMLHttpRequest();
@@ -87,6 +109,11 @@ function openCity(evt, period) {
   evt.currentTarget.className += " active-tab";
 }
 
+document.getElementById('navbar-toggler').addEventListener('click', function () {
+  const navbarNav = document.getElementById('navbarNav');
+  navbarNav.classList.toggle('open');
+});
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
+

@@ -6,99 +6,20 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="applicationForm.css">
         <link rel="stylesheet" href="responsive-style.css">
+        <link rel="stylesheet" href="navbar.css">
         <!-- <link rel="icon" href="logo.ico" type="image/x-icon"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <title>Windy Heights Primary</title>
     </head>
     <body>
-        <div class="container">
+        <header>
+            <div id="navbar-container"></div>
+        </header>
+   
              <!-------- MOBILE SCREEN NAVBAR  ------->
             
-             <div class="links-list sidebar">
-                <a class="link" onclick=closeSidebar() ><i class="fa-solid fa-xmark"></i></a>
-                <a class="link" href="index.html" onclick=closeSidebar()>Home</a>
-                <a class="link" href="gallery.html" onclick=closeSidebar() >Gallery</a>
-                <div class="dropdown">
-                    <button class="dropbtn">About Us</button>
-                    <div class="dropdown-content">
-                        <a href="about.html"  onclick=closeSidebar()>History</a>
-                        <a href="about.html#Staff" onclick=closeSidebar()>Staff</a>
-                        <a href="about.html#Partners" onclick=closeSidebar()>Partners</a>
-                        <a href="newsletters.html" onclick=closeSidebar()>Newsletter</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">Learner Portal</button>
-                    <div class="dropdown-content">
-                        <a href="calendar.html" onclick=closeSidebar()>School Calendar</a>
-                        <a href="#" onclick=closeSidebar()>Regulations & Conduct</a>
-                    </div>
-                </div>
-    
-                <div class="dropdown">
-                    <button class="dropbtn">Learner Portal</button>
-                    <div class="dropdown-content">
-                        <a href="calendar.html" onclick=closeSidebar()>School Calendar</a>
-                        <a href="#" onclick=closeSidebar()>Regulations & Conduct</a>
-                    </div>
-                </div>
-    
-                <a class="link" href="#Contact" onclick=closeSidebar()>Contact Us</a>
-                
-                <!-- <a class="link apply" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox()>Apply</a> -->
-                <div class="dropdown">
-                    <button class="dropbtn">Apply</button>
-                    <div class="dropdown-content">
-                <a class="link" href="applicationForm.html">Apply Online</a>
-                <a class="link" href="images/Content/learner-portal/Admission-form.pdf">Download Form</a>
-                <a class="link" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download id="apply" onclick=showBox() >Download Form</a>
-                    </div>
-                </div>
-                </div>
-            <!---------------- NAVIGATION BAR ----------------->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <div class="logo"></div>
-                    <span>Windy Heights Primary</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="about.html">History</a>
-                                <a class="dropdown-item" href="about.html#Staff">Staff</a>
-                                <a class="dropdown-item" href="about.html#Partners">Partners</a>
-                                <a class="dropdown-item" href="newsletters.html">Newsletter</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Learner Portal</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                <a class="dropdown-item" href="calendar.html">School Calendar</a>
-                                <a class="dropdown-item" href="#">Regulations & Conduct</a>
-                            </div>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#Contact">Contact Us</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Apply</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                                <a class="dropdown-item" href="applicationForm.html">Apply Online</a>
-                                <a class="dropdown-item" href="images/Content/learner-portal/Admission-form.pdf" target="_blank" download onclick="showBox()">Download Form</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <br><br><br><hr>
-
+             
     <div class="container mt-5">
     
         <div class="card">
@@ -656,8 +577,14 @@
     </script>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
+    <script src="navbar.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+<!-- Popper.js (Bootstrap dropdowns depend on this for positioning) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

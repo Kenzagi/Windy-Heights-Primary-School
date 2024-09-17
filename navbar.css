@@ -1,0 +1,71 @@
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(244, 38, 38, 0.8); /* Transparent red */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 30px;
+    position: relative;
+}
+
+.navbar .logo-img {
+    width: 70px;
+    height: auto;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Sans-serif';
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcccc;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: rgba(244, 38, 38, 0.9);
+    border: none;
+}
+
+.navbar-nav .dropdown-item {
+    color: #fff;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #ffcccc;
+    color: #000;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 10px;
+}
+
+/* Specific adjustment for the last nav-item (Apply) */
+.navbar-nav .nav-item:last-child {
+    margin-right: 40px; /* Moves it left by increasing the margin */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 5px 0;
+    }
+}

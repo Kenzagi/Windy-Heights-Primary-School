@@ -1,124 +1,81 @@
-.intro { 
-	text-align: center; 
-	padding-bottom: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	
-}
-
-.intro .line{
-		Width: 120px;
-	}
-
-
-.newsletter h2{
-	font-size: 30px;
-	font-weight: 600;
-	padding: 0;
-}
-
-.gallery p { 
-  /* font-size: 14pt; */
-  width: 100%;
-  padding: 0px 20rem;
+/* General Styles */
+.gallery {
+  background: #FFFAFF;
+  padding: 120px 20px 20px;
   text-align: center;
 }
 
-.gallery{
-	background: #FFFAFF;
-	padding-top: 120px;
+.gallery-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-#image-gallery {
-  width: 400px;
-  height: auto;
-  margin: 0 auto;
+.gallery-heading {
+  font-size: 2.5em;
+  margin: 0;
+  color: #000;
+}
+
+.gallery-line {
+  width: 120px;
+  height: 4px;
+  background-color: #000;
+  margin: 10px auto;
+}
+
+.gallery-description {
   color: #151414;
-  text-align: center;
-	
+  font-size: 16px;
+  max-width: 800px;
+  margin: 0 auto 20px;
 }
 
-#image-gallery p{
-	margin: 20px 0;
+.thumb-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
 }
 
-.thumb-wrapper{
-	overflow: auto;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 20px;
-	padding: 20px 0px;
+.thumb-wrapper img {
+  width: 120px;
+  height: 140px;
+  object-fit: cover;
+  cursor: zoom-in;
+  border-radius: 8px;
+  transition: transform 0.3s, filter 0.3s;
 }
 
-.thumb-wrapper img{
-	min-width: 120px;
-	height: 140px;
-	cursor: zoom-in;
+.thumb-wrapper img:hover {
+  transform: scale(1.1);
+  filter: grayscale(50%);
 }
 
-#current-image { 
-  width: 100%;
-} 
-
-#image-thumbs { 
-  display: flex; 
-  justify-content: center; 
-  margin-top: 20px;
-}
-
-.thumb {
-  width: 100px; 
-  height: 100px; 
-  object-fit: cover; 
-  margin-right: 10px; 
-  cursor: pointer;
-}
-
-
-/*sdddddssssssssssssssssssssssssssss*/
-
-#myImg {
-  border-radius: 3px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.thumb-wrapper:hover > :not(:hover) {
-	opacity: 0.9;
-	filter: grayscale(50%);
-}
-
-#myImg:hover {
-	transform: scale(1.1);
-}
-
-/* The Modal (background) */
+/* Modal Styles */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 30px; /* Location of the box */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
-  top: 10%;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 60px;
 }
 
-/* Modal Content (image) */
 .modal-content {
   margin: auto;
   display: block;
-  width: 50%;
-  max-width: 400px;
+  width: 80%;
+  max-width: 700px;
   border-radius: 4px;
 }
 
-/* Caption of Modal Image */
 #caption {
   margin: auto;
   display: block;
@@ -127,28 +84,8 @@
   text-align: center;
   color: #ccc;
   padding: 10px 0;
-  height: 150px;
 }
 
-/* Add Animation */
-.modal-content, #caption {  
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
-}
-
-/* The Close Button */
 .close {
   position: absolute;
   top: 15px;
@@ -157,60 +94,48 @@
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
-  background: transparent;
 }
 
 .close:hover,
 .close:focus {
   color: #bbb;
-  text-decoration: none;
   cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+/* Responsive Styles */
+@media only screen and (max-width: 800px) {
+  .gallery-description {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .thumb-wrapper img {
+      width: 100px;
+      height: 120px;
+  }
+
+  .close {
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+  }
+
   .modal-content {
-    width: 100%;
+      width: 90%;
   }
 }
 
-/************ GALLERY MOBILE PAGE STYLING ***********/
+@media only screen and (max-width: 600px) {
+  .gallery-description {
+      font-size: 12px;
+  }
 
-@media only screen and (max-width: 800px) {
-	
-	.gallery {
-			padding: 10px;
-			padding-top: 120px;
-		
-	}
-	
-	.gallery p{
-			width: 100%;
-			padding: 10px;
-			padding-bottom: 20px;
-		}
-		
-		.thumb-wrapper{
-			align-items: center;
-			padding: 0;
-			gap: 10px;
-		}
-	
-	
-	#myImg {
-		width: 55px;
-		margin-right: 0;
-	}
-	
-	.close {
-		top: 30px;
-		/* display: flex; */
-		/* justify-content: center; */
-		/* align-items: center; */
-		/* Width: 40px; */
-		/* height: 40px; */
-		/* background: rgba(5, 6, 9, .6); */
-		color: #F42626;
-		font-size: 58px;
-	}
+  .thumb-wrapper img {
+      width: 80px;
+      height: 100px;
+  }
+
+  .close {
+      font-size: 25px;
+  }
 }
